@@ -1,0 +1,77 @@
+extends base
+
+block meta
+    - var seotitle = 'Проекты'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Хлебные крошки
+    .breadcrumbs(data-aos="fade-up")
+        .container
+            ul.breadcrumbs__list.list-reset
+                li 
+                    a(href="home.html") Главная
+                li Проекты
+
+    .container
+        h1.h1(data-aos="fade-right") Проекты
+
+        include pug/layout/_about-pluses
+
+    //Директор
+    include pug/layout/_chief
+
+    //Проекты
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-up") Проекты
+                    
+            .home-projects._alt
+                +project('Внедрили систему аудиопротоколирования судебных заседаний', 'project.html', 'project-1.svg')
+                +project('Поставили и обслуживаем оборудование в труднодоступной местности', 'project.html', 'project-2.svg')
+                +project('Построили ЦОД', 'project.html', 'project-3.svg')
+
+    //Партнеры
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-up") Партнеры
+
+            .swiper._full-width(data-swiper-marquee data-aos="fade-up")
+                .swiper-wrapper.swiper__marquee
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-1.svg" width="155" height="72" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-2.svg" width="181" height="72" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-3.svg" width="202" height="23" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-4.svg" width="203" height="29" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-5.svg" width="142" height="116" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-6.svg" width="112" height="81" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-7.svg" width="263" height="51" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-8.svg" width="217" height="35" alt="")
+
+    //Клиенты
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-up") Клиенты
+
+            .swiper._full-width(data-swiper-marquee data-aos="fade-up")
+                .swiper-wrapper.swiper__marquee
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-1.svg" width="203" height="74" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-2.svg" width="240" height="50" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-3.svg" width="85" height="85" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-4.svg" width="331" height="43" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-5.svg" width="319" height="50" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-6.svg" width="324" height="50" alt="")

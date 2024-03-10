@@ -1,0 +1,20 @@
+extends base
+
+block meta
+    - var seotitle = 'Страница не найдена'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Хлебные крошки
+    .breadcrumbs(data-aos="fade-up")
+        .container
+            ul.breadcrumbs__list.list-reset
+                li 
+                    a(href="home.html") Главная
+                li Страница не найдена
+        
+    .container.not-found(data-aos="fade-up")
+        +sprite('not-found__icon', 833, 285, '404')
+        h1.h1.not-found__title Страница не найдена
+        a.not-found__btn.btn._blue.btn-reset(href="home.html") Перейти на главную

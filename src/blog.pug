@@ -1,0 +1,41 @@
+extends base
+
+block meta
+    - var seotitle = 'Блог'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Хлебные крошки
+    .breadcrumbs(data-aos="fade-up")
+        .container
+            ul.breadcrumbs__list.list-reset
+                li 
+                    a(href="home.html") Главная
+                li Блог
+
+    .container
+        h1.h1(data-aos="fade-up") Блог
+
+        swiper.swiper.tabs._full-width-tablet(data-swiper-tabs)
+            .swiper-wrapper
+                .swiper-slide.tabs__slide
+                    a.tabs__item.btn.btn-reset._bordered.active(href="blog.html" data-aos="fade-up" data-aos-delay="0") Все записи
+                .swiper-slide.tabs__slide
+                    a.tabs__item.btn.btn-reset._bordered(href="blog.html" data-aos="fade-up" data-aos-delay="200") Новости
+                .swiper-slide.tabs__slide
+                    a.tabs__item.btn.btn-reset._bordered(href="blog.html" data-aos="fade-up" data-aos-delay="400") Статьи
+                .swiper-slide.tabs__slide
+                    a.tabs__item.btn.btn-reset._bordered(href="blog.html" data-aos="fade-up" data-aos-delay="600") Мероприятия
+
+        .blog-items
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#новости', 'fade-up')
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#статьи', 'fade-up')
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#мероприятия', 'fade-up')
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#мероприятия', 'fade-up')
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#статьи', 'fade-up')
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#новости', 'fade-up')
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#новости', 'fade-up')
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#статьи', 'fade-up')
+            +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#мероприятия', 'fade-up')
+            

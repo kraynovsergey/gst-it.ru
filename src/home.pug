@@ -1,0 +1,268 @@
+extends base
+
+block meta
+    - var seotitle = 'Главная страница'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Интро
+    .home-intro
+        .container.home-intro__container
+            .home-intro__swiper.swiper(data-swiper-home-intro data-aos="fade-right")
+                .swiper-wrapper
+                    mixin home-intro-slide
+                        .swiper-slide._equal-height
+                            article.home-intro__slide.radius-20.shadow
+                                span.home-intro__slide-bg 1 0 1 0 0 0 1 1 0 1 0 0 0 1 <br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 <br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 <br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 <br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 <br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 <br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 <br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                                +picture('home-intro__picture picture _cover radius-20', 'tmp/home-intro/slide', 'jpg', 490, 400, 'Поставщик ИТ-решений и услуг')
+                                .home-intro__content
+                                    h3.home-intro__title Поставщик ИТ-решений и услуг
+                                    p.home-intro__subtitle Находим болевые точки в инфраструктуре заказчиков
+
+                    +home-intro-slide
+                    +home-intro-slide
+                    +home-intro-slide
+                    +home-intro-slide
+                    +home-intro-slide
+
+            .home-intro__navs.radius-20(data-swiper-home-intro-navs data-aos="fade-left")
+                .home-intro__navs-wrapper
+                    mixin home-intro-nav(icon, title, item, classname)
+                        button.home-intro__nav.btn-reset(type="button" data-swiper-home-intro-nav=item class=classname)
+                            span.home-intro__nav-icon
+                                +sprite('_icon', 45, 45, icon)
+                            =title
+
+                    +home-intro-nav('home-intro-carousel-1', 'Консалтинг и аудит', 0, '_active')
+                    +home-intro-nav('home-intro-carousel-2', 'Проектирование', 1, '')
+                    +home-intro-nav('home-intro-carousel-3', 'Поставка', 2, '')
+                    +home-intro-nav('home-intro-carousel-4', 'Внедрение', 3, '')
+                    +home-intro-nav('home-intro-carousel-5', 'Сопровождение', 4, '')
+
+    //Цифры
+    section.section.home-numbers
+        .home-numbers__bg 1 0 1 0 0 0 1 1 0 1 0 0 0 1 <br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 <br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 <br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 <br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 <br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 <br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 <br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+        .container
+            h2.home-numbers__title(data-aos="fade-up") Одна из <span>лучших</span> региональных компаний, осуществляющая свою деятельность в центральной части России.
+
+            ul.home-numbers__items.list-reset
+                li.home-numbers__item.radius-10.shadow(data-aos="fade-up")
+                    span.home-numbers__item-title <span>100+</span> заказчиков
+                li.home-numbers__item.radius-10.shadow(data-aos="fade-up" data-aos-delay="100")
+                    span.home-numbers__item-title <span>250+</span> реализованных проектов
+                li.home-numbers__item.radius-10.shadow(data-aos="fade-up" data-aos-delay="200")
+                    span.home-numbers__item-title <span>50+</span> партнёров
+
+    //О нас
+    section.section.home-about._p0
+        .container
+            h2.section__title(data-aos="fade-up") О нас
+
+            include pug/layout/_about-pluses
+
+    //Директор
+    include pug/layout/_chief
+
+    //Проекты
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-up") Проекты
+                    
+            .home-projects
+                +project('Внедрили систему аудиопротоколирования судебных заседаний', 'project.html', 'project-1.svg')
+                +project('Поставили и обслуживаем оборудование в труднодоступной местности', 'project.html', 'project-2.svg')
+                +project('Построили ЦОД', 'project.html', 'project-3.svg')
+
+                .home-projects__all
+                    +picture('home-projects__picture picture _cover radius-20', 'tmp/projects/project-all', 'jpg', 410, 305, 'Проекты', 'fade-up')
+                    +project('Все проекты', 'projects.html')
+
+    //Услуги
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-up") Услуги
+
+            include pug/layout/_services
+
+    //Продукты
+    section.section._pb0
+        .container
+            .swiper__header(data-aos="fade-up")
+                h2.section__title Продукты
+                .swiper__navs
+                    button.swiper__nav._prev.radius-10.shadow.btn-reset(type="button" data-swiper-products-prev)
+                        +sprite('', 31, 16, 'arrow-right')
+                    button.swiper__nav._next.radius-10.shadow.btn-reset(type="button" data-swiper-products-next)
+                        +sprite('', 31, 16, 'arrow-right')
+
+
+            .swiper._full-width._shadow-vertical(data-swiper-products)
+                .swiper-wrapper                
+                    .swiper-slide._equal-height(data-aos="fade-up")
+                        +product('product-icon-1', 'Хранение и обработка данных')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="100")
+                        +product('product-icon-2', 'Оснащение рабочих мест')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="200")
+                        +product('product-icon-3', 'Безопасность')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="300")
+                        +product('product-icon-4', 'Профессиональные AV решения')
+
+    //Спецпредложения
+    section.section._pb0
+        .container
+            .swiper__header(data-aos="fade-up")
+                h2.section__title Спецпредложения
+                .swiper__navs
+                    button.swiper__nav._prev.radius-10.shadow.btn-reset(type="button" data-swiper-sale-prev)
+                        +sprite('', 31, 16, 'arrow-right')
+                    button.swiper__nav._next.radius-10.shadow.btn-reset(type="button" data-swiper-sale-next)
+                        +sprite('', 31, 16, 'arrow-right')
+
+            .swiper(data-swiper-sale data-aos="fade-up")
+                .swiper-wrapper
+                    mixin sale(title, text, img)
+                        article.sale.radius-30
+                            .sale__content
+                                .sale__bg 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                                .sale__icon Спецпредложение
+                                h3.sale__title=title
+                                p.sale__text=text
+                                a.sale__link.link._full.btn._white.btn-reset(href="product.html") Подробнее
+                            +picture('sale__picture picture _cover radius-30', img, 'jpg', 860, 420, title)
+
+                    .swiper-slide._equal-height
+                        +sale('Диспетчерская и Ситуационный центр', 'Интегрированная система, включающая в себя как программное, так и аппаратное обеспечение. Ее главная цель - обеспечить эффективное управление и контроль за процессами, требующими постоянного мониторинга и анализа 24/7.', 'tmp/sale/sale-1')
+
+                    .swiper-slide._equal-height
+                        +sale('Диспетчерская и Ситуационный центр', 'Интегрированная система, включающая в себя как программное, так и аппаратное обеспечение. Ее главная цель - обеспечить эффективное управление и контроль за процессами, требующими постоянного мониторинга и анализа 24/7.', 'tmp/sale/sale-1')
+
+                    .swiper-slide._equal-height
+                        +sale('Диспетчерская и Ситуационный центр', 'Интегрированная система, включающая в себя как программное, так и аппаратное обеспечение. Ее главная цель - обеспечить эффективное управление и контроль за процессами, требующими постоянного мониторинга и анализа 24/7.', 'tmp/sale/sale-1')
+
+            .swiper__pagination(data-swiper-sale-pagination)
+
+    //Партнеры
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-up") Партнеры
+
+            .swiper._full-width(data-swiper-marquee data-aos="fade-up")
+                .swiper-wrapper.swiper__marquee
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-1.svg" width="155" height="72" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-2.svg" width="181" height="72" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-3.svg" width="202" height="23" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-4.svg" width="203" height="29" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-5.svg" width="142" height="116" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-6.svg" width="112" height="81" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-7.svg" width="263" height="51" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/partners/partner-8.svg" width="217" height="35" alt="")
+
+    //Клиенты
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-up") Клиенты
+
+            .swiper._full-width(data-swiper-marquee data-aos="fade-up")
+                .swiper-wrapper.swiper__marquee
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-1.svg" width="203" height="74" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-2.svg" width="240" height="50" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-3.svg" width="85" height="85" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-4.svg" width="331" height="43" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-5.svg" width="319" height="50" alt="")
+                    .swiper-slide.partner._equal-height
+                        img(src="@img/tmp/clients/client-6.svg" width="324" height="50" alt="")
+
+    //Нам доверяют
+    section.section._pb0
+        .container
+            .swiper__header(data-aos="fade-up")
+                h2.section__title Нам доверяют
+                .swiper__navs
+                    button.swiper__nav._prev.radius-10.shadow.btn-reset(type="button" data-swiper-confidence-prev)
+                        +sprite('', 31, 16, 'arrow-right')
+                    button.swiper__nav._next.radius-10.shadow.btn-reset(type="button" data-swiper-confidence-next)
+                        +sprite('', 31, 16, 'arrow-right')
+
+            .swiper._full-width-tablet(data-swiper-confidence)
+                .swiper-wrapper
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="0")
+                        article.confidence.radius-30
+                            h3.confidence__title АО "Самарская Кабельная Компания"
+                            .confidence__text
+                                p Наше сотрудничество началось в 2010 году и за это время компания ООО «Джи-Эс-Ти» проявила себя только с положительной стороны. При возникновении любых вопросов их команда готова предложить решение, а затем в кратчайшие сроки внедрить его.
+                                p Профессионалы своего дела, ответственные и открытые к диалогу, сотрудники компании стали незаменимыми партнерами, с которыми приятно работать.
+                                p Уверены, что впереди нас ждут новые масштабные совместные проекты, которые мы успешно сможем реализовать общими усилиями.
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="100")
+                        article.confidence.radius-30
+                            h3.confidence__title МЧС России по Самарской области
+                            .confidence__text
+                                p Главное управление МЧС России по Самарской обл. в лице Начальника ГУМЧС Бойко О.В. выражает благодарность дирекции компании Джи-Эс-Ти за активное участие в создании Музейно-выставочного центра истории и развития пожарно-спасательного дела Самарской области.
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="200")
+                        article.confidence.radius-30
+                            h3.confidence__title АО "Самарская Кабельная Компания"
+                            .confidence__text
+                                p Наше сотрудничество началось в 2010 году и за это время компания ООО «Джи-Эс-Ти» проявила себя только с положительной стороны. При возникновении любых вопросов их команда готова предложить решение, а затем в кратчайшие сроки внедрить его.
+                                p Профессионалы своего дела, ответственные и открытые к диалогу, сотрудники компании стали незаменимыми партнерами, с которыми приятно работать.
+                                p Уверены, что впереди нас ждут новые масштабные совместные проекты, которые мы успешно сможем реализовать общими усилиями.
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="300")
+                        article.confidence.radius-30
+                            h3.confidence__title МЧС России по Самарской области
+                            .confidence__text
+                                p Главное управление МЧС России по Самарской обл. в лице Начальника ГУМЧС Бойко О.В. выражает благодарность дирекции компании Джи-Эс-Ти за активное участие в создании Музейно-выставочного центра истории и развития пожарно-спасательного дела Самарской области.
+
+    //Новости
+    section.section._pb0
+        .container
+            .swiper__header(data-aos="fade-up")
+                h2.section__title Новости
+                .swiper__navs
+                    button.swiper__nav._prev.radius-10.shadow.btn-reset(type="button" data-swiper-news-prev)
+                        +sprite('', 31, 16, 'arrow-right')
+                    button.swiper__nav._next.radius-10.shadow.btn-reset(type="button" data-swiper-news-next)
+                        +sprite('', 31, 16, 'arrow-right')
+
+            .swiper._full-width-tablet._shadow-full(data-swiper-news)
+                .swiper-wrapper
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="0")
+                        +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#новости')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="100")
+                        +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#статьи')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="200")
+                        +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#мероприятия')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="300")
+                        +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#новости')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="400")
+                        +news('tmp/news/news-1', '22.12.22', 'NGR Softlab и «Сиссофт» объявили о начале сотрудничества', '#статьи')
+
+
+
+
+                
+
+
+                
+
+            
+        
+                
+
+
+
+
+                
+                            
+

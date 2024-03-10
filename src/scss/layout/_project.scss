@@ -1,0 +1,62 @@
+.project {
+    background: $color_bg;
+    padding: clamp-calc(20px, 45px) clamp-calc(15px, 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: clamp-calc(30px, 60px);
+    position: relative;
+    transition: .5s ease-in-out !important;
+
+    &:hover {
+        @include tablet-from {
+            background: $color_primary;
+            color: $color_white;
+            box-shadow: none;
+
+            & .project__btn {
+                background: $color_gold;
+                box-shadow: none;
+            }
+        }
+    }
+
+    &__title {
+        padding: 0;
+        margin: 0;
+        font-weight: 600;
+        font-size: clamp-calc(18px, 30px);
+    }
+
+    &__btn {
+        width: clamp-calc(40px, 85px);
+        height: clamp-calc(40px, 85px);
+        background: $color_bg;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color_primary;
+        transition: .5s ease-in-out;
+        z-index: 2;
+
+        &:hover {
+            @include tablet-from {
+                background: $color_gold;
+            }
+        }
+
+        & svg {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+    &__icon {
+        width: clamp-calc(100px, 200px);
+        height: auto;
+        position: absolute;
+        bottom: calc(clamp-calc(10px, 20px) * -1);
+        right: clamp-calc(15px, 30px);
+    }
+}

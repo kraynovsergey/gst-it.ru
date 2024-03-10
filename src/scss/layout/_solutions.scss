@@ -1,0 +1,32 @@
+.solutions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp-calc(20px, 40px);
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: clamp-calc(15px, 30px);
+        padding: clamp-calc(20px, 50px) clamp-calc(15px, 60px);
+
+        &._yellow {
+            background: $color_gold;
+            color: #1e1e1e;
+        }
+
+        &._blue {
+            background: $color_primary;
+            color: $color_white;
+        }
+    }
+
+    &__title {
+        padding: 0;
+        margin: 0;
+    }
+}

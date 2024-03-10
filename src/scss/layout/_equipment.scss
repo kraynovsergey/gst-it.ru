@@ -1,0 +1,18 @@
+.equipment {
+    &__header {
+        margin-bottom: clamp-calc(30px, 60px);
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: clamp-calc(20px, 310px);
+    }
+
+    &__text {
+        margin: 0;
+        font-size: clamp-calc(16px, 22px);
+    }
+
+    &__bottom {
+        margin-top: clamp-calc(30px, 60px);
+    }
+}

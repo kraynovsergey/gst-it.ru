@@ -1,0 +1,88 @@
+extends base
+
+block meta
+    - var seotitle = 'Профессиональные AV решения'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Хлебные крошки
+    .breadcrumbs(data-aos="fade-up")
+        .container
+            ul.breadcrumbs__list.list-reset
+                li 
+                    a(href="home.html") Главная
+                li 
+                    a(href="products.html") Продукты
+                li Профессиональные AV решения
+
+    .container
+        h1.h1(data-aos="fade-right") Профессиональные AV решения
+
+        .tabs-container
+            swiper.swiper.tabs._full-width(data-swiper-tabs)
+                .swiper-wrapper
+                    .swiper-slide.tabs__slide
+                        button.tabs__item.tab.btn.btn-reset._bordered.asd.active(type="button" data-aos="fade-up" data-aos-delay="0") Диспетчерская и Ситуационный центр
+                    .swiper-slide.tabs__slide
+                        button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="200") Переговорная комната
+                    .swiper-slide.tabs__slide
+                        button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="400") Конференц-зал
+                    .swiper-slide.tabs__slide
+                        button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="600") Цифровые информационные табло (Digital Signage)
+
+            .tab-panes
+                mixin product-sale(title)
+                    article.product-sale
+                        .sale__content.shadow.radius-30(data-aos="fade-right")
+                            .sale__icon Спецпредложение
+                            h3.sale__title=title
+                            p.sale__text Интегрированная система, включающая в себя как программное, так и аппаратное обеспечение. Ее главная цель - обеспечить эффективное управление и контроль за процессами, требующими постоянного мониторинга и анализа 24/7.
+                        +picture('sale__picture picture _cover shadow radius-30', 'tmp/product/product-sale', 'jpg', 710, 373, title, 'fade-left')
+
+                .tab-pane.active
+                    +product-sale('Диспетчерская и Ситуационный центр')
+                .tab-pane
+                    +product-sale('Переговорная комната')
+                .tab-pane
+                    +product-sale('Конференц-зал')
+                .tab-pane
+                    +product-sale('Цифровые информационные табло (Digital Signage)')
+
+    //Оборудование
+    section.section._pb0
+        .container
+            .equipment__header
+                .equipment__header-content
+                    h2.section__title(data-aos="fade-up") Оборудование или направления, которые могут входить в раздел
+                    p.equipment__text(data-aos="fade-up") Диспетчерский и ситуационный центры часто требуют специализированного оборудования для эффективного управления процессами и принятия решений в реальном времени. Вот некоторые типичные компоненты оборудования, которые могут использоваться в таких центрах:
+                .swiper__navs(data-aos="fade-up")
+                    button.swiper__nav._prev.radius-10.shadow.btn-reset(type="button" data-swiper-products-prev)
+                        +sprite('', 31, 16, 'arrow-right')
+                    button.swiper__nav._next.radius-10.shadow.btn-reset(type="button" data-swiper-products-next)
+                        +sprite('', 31, 16, 'arrow-right')
+
+            mixin value(title, icon)
+                article.value.shadow.radius-30(data-value)
+                    .value__text.text
+                        p Включают телефонные системы, видео- и аудиоконференц-системы, IP-телефонию, рации или системы связи для оперативного общения между диспетчерами и сотрудниками в различных зонах или объектах.
+
+                    .value__content
+                        h3.value__title=title
+                        .value__icon
+                            +sprite('', 120, 120, icon)
+
+            .swiper._full-width-tablet._shadow-full(data-swiper-products)
+                .swiper-wrapper
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="0")
+                        +value('Коммуникационные системы', 'equipment-1')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="200")
+                        +value('Системы мониторинга и визуализации', 'equipment-2')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="400")
+                        +value('Системы видеонаблюдения', 'equipment-3')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="600")
+                        +value('Системы контроля доступа и безопасности', 'equipment-4')
+                    .swiper-slide._equal-height(data-aos="fade-up" data-aos-delay="800")
+                        +value('Коммуникационные системы', 'equipment-1')
+
+            p.equipment__text.equipment__bottom(data-aos="fade-up" data-aos-delay="200") Эффективное оборудование и оснащение диспетчерских и ситуационных центров играют критическую роль в оперативном реагировании на события, эффективном управлении инцидентами и обеспечении безопасности в различных областях, таких как транспорт, общественная безопасность, энергетика, медицина и многое другое.

@@ -1,0 +1,57 @@
+.modal {
+    display: none;
+    padding: 0;
+    background: none;
+    width: 100%;
+    max-width: 570px;
+    color: $color_primary;
+    position: relative;
+    background: none;
+
+
+    & .is-close-btn {
+        display: none;
+    }
+
+    &__close {
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        color: $color_primary;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            @include tablet-from {
+                color: $color_gold;
+            }
+        }
+    }
+
+    &__content {
+        padding: 45px clamp-calc(20px, 55px) clamp-calc(20px, 36px);
+        background: #fff;
+        width: 100%;
+    }
+
+    &__thankyou {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: clamp-calc(18px, 30px);
+        text-align: center;
+        margin: 0 0 clamp-calc(20px, 36px);
+        padding: 0;
+        font-weight: 600;
+    }
+
+    &__text {
+        margin: 0 0 clamp-calc(20px, 36px);
+    }
+
+    &__form {
+        gap: 20px;
+    }
+}

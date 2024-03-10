@@ -1,0 +1,20 @@
+body.hide-scrollbar {
+    & .header {
+        width: calc(100% - var(--fancybox-scrollbar-compensate,0px));
+    }
+}
+
+.fancybox {
+    &__slide {
+        padding: 0;
+    }
+
+    &__container:not(.is-compact) .fancybox__slide.has-close-btn {
+        padding: 0;
+    }
+
+    &__backdrop {
+        background: rgba(6, 0, 29, 0.8);
+        opacity: 1;
+    }
+}

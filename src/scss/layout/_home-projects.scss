@@ -1,0 +1,25 @@
+.home-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp-calc(20px, 40px);
+
+    @include tablet-small {
+        grid-template-columns: 1fr;
+    }
+
+    &._alt {
+        & .project {
+            &:last-child {
+                @include tablet-small-from {
+                    grid-column: span 2;
+                }
+            }
+        }
+    }
+
+    &__all {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp-calc(20px, 40px);
+    }
+}

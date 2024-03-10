@@ -1,0 +1,15 @@
+.product-sale {
+    display: grid;
+    grid-template-columns: .57fr .43fr;
+    gap: clamp-calc(20px, 40px);
+
+    @include tablet-small {
+        grid-template-columns: 1fr;
+    }
+
+    & .sale__content {
+        @include tablet-small {
+            padding-top: 30px;
+        }
+    }
+}

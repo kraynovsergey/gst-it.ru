@@ -1,0 +1,22 @@
+.section {
+    padding: clamp-calc(40px, 100px) 0;
+
+    &._p0 {
+        padding: 0;
+    }
+
+    &._pt0 {
+        padding-top: 0;
+    }
+
+    &._pb0 {
+        padding-bottom: 0;
+    }
+
+    &__title {
+        font-size: clamp-calc(22px, 45px);
+        padding: 0;
+        font-weight: 500;
+        margin: 0 0 clamp-calc(20px, 40px);
+    }
+}

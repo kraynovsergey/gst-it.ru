@@ -1,0 +1,82 @@
+extends base
+
+block meta
+    - var seotitle = 'Внедрили систему аудиопротоколирования судебных заседаний'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Интро
+    section.project-page-intro
+        +sprite('project-page-intro__icon', 400, 400, 'project-page-intro')
+        .container.project-page-intro__container
+            .project-page-intro__content
+                .breadcrumbs(data-aos="fade-up")
+                    ul.breadcrumbs__list.list-reset
+                        li 
+                            a(href="home.html") Главная
+                        li 
+                            a(href="projects.html") Проекты
+                        li Внедрили систему аудиопротоколирования судебных заседаний
+
+                .project-page-intro__text(data-aos="fade-right")
+                    h1.project-page-intro__title Внедрили систему аудиопротоколирования судебных заседаний
+                    .project-page-intro__subtitle.text
+                        p Реализация проекта была необходима для удовлетворения новых требований законодательства по аудиофиксации хода судебных заседаний, а также для автоматизации работы секретарей судебных заседаний.
+                    button.btn.btn-reset._blue(type="button" data-fancybox data-src="#modal-project") Заказать проект
+
+            +picture('project-page-intro__picture picture _cover radius-left-30', 'tmp/project/project-intro', 'jpg', 790, 840, 'Внедрили систему аудиопротоколирования судебных заседаний', 'fade-left')
+
+    //Цели и задачи
+    section.section._pb0 
+        .container
+            h2.section__title(data-aos="fade-right") Цели (задачи)
+
+            .targets
+                .targets__item.shadow.radius-30(data-aos="fade-up")
+                    +sprite('targets__icon', 60, 60, 'target')
+                    p.targets__text Автоматизация работы секретаря за счёт автоматического формирования протокола заседания с помощью системы распознавания аудиозаписей и электронного шаблона, в котором должны быть зафиксированы в хронологической последовательности действия и выступления участников заседания с привязкой к фрагментам аудиозаписи.
+
+                .targets__item.shadow.radius-30(data-aos="fade-up" data-aos-delay="200")
+                    +sprite('targets__icon', 60, 60, 'target')
+                    p.targets__text Защита Аудиозаписи судебного заседания от потери в случае сбоя (аппаратного или программного), от случайной или намеренной порчи, изменения или удаления.
+
+
+    //Цели и задачи
+    section.section._pb0 
+        .container
+            h2.section__title(data-aos="fade-right") Решение
+
+            .solutions
+                article.solutions__item._yellow.shadow.radius-30(data-aos="fade-up")
+                    h3.solutions__title Решение
+                    .solutions__text.text
+                        p В основу решения легло специальное программное обеспечение «Нестор.Правосудие». Программа отвечает всем требованиям заказчика по ведению записи и расшифровке, а также интегрируется с системами судо- и делопроизводства, электронными архивами, системами интернет-трансляций.
+                        p В сочетании со специализированным многофункциональным аудиоустройством с функциями усиления и микширования обеспечивается безошибочный перевод аудиозаписи в текст и формирование протокола судебного заседания.
+                        p Менее чем за три месяца 113 судебных участков было оборудовано стационарными комплексами аудиопротоколирования, а на 49 участков были поставлены мобильные комплексы для проведения выездных судебных заседаний. Было настроено резервное копирование всех записываемых данных на 44-х установленных серверах. Всё это - без нарушения графика судебных заседаний.
+                        p После интеграции системы аудиопротоколирования с информационными системами мировых судов было проведено обучение работе с системой всех секретарей судебных заседаний.
+
+                article.solutions__item._blue.shadow.radius-30(data-aos="fade-up" data-aos-delay="200")
+                    h3.solutions__title Результаты
+                    .solutions__text.text
+                        p Внедрение системы аудиопротоколирования значительно облегчило работу секретарей по формированию протоколов судебного заседания, уменьшило количество ошибок, исключило возможность потери данных и обеспечило простой доступ к записям, прослушиванию и работе с ними. Грамотный подбор аппаратного решения в сочетании с трёхлетней технической поддержкой, предоставленной пользователям, обеспечил непрерывную работу системы с сентября 2019 года по настоящий момент.
+
+block modals
+    .modal(id="modal-project" data-lenis-prevent)
+        .modal__content.radius-20
+            button.modal__close.btn-reset(type="button" data-fancybox-close)
+                +sprite('', 30, 30, 'modal-close')
+
+            h3.modal__title Заказать проект
+
+            form.form.modal__form(action="#" method="post" data-policy-form)
+                input.form__input.radius-10(type="text" name="name" placeholder="Имя*")
+                input.form__input.radius-10(type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel)
+                textarea.form__textarea.radius-10(name="message" placeholder="Комментарий")
+                button.form__submit.btn.btn-reset._blue(type="submit" data-policy-submit data-open-thankyou) Оставить заявку
+                .form__checkbox
+                    input.form__checkbox-input(type="checkbox" name="privacy_policy" id="policy-project-modal" data-policy)
+                    label.form__checkbox-label(for="policy-project-modal") 
+                        span.form__checkbox-label-check
+                        span Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет
+                .form__required <span>*</span>Обязательно для заполнения

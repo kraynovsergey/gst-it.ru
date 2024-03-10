@@ -1,0 +1,64 @@
+.footer-form {
+    background: $color_primary;
+    position: relative;
+    padding: clamp-calc(15px, 80px) 0;
+
+    &._contacts {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &__numbers {
+        position: absolute;
+        font-weight: 300;
+        font-size: clamp-calc(40px, 80px);
+        background: linear-gradient(127deg, #3e2a8d 0%, #372382 100%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        top: 0;
+        white-space: nowrap;
+        z-index: 1;
+    }
+
+    &__container {
+        position: relative;
+        z-index: 2;
+    }
+
+    &__content {
+        background: $color_white;
+        padding: clamp-calc(20px, 40px) clamp-calc(15px, 70px);
+    }
+
+    &__title {
+        margin: 0 0 clamp-calc(20px, 40px);
+        padding: 0;
+        font-size: clamp-calc(22px, 45px);
+        font-weight: 500;
+    }
+
+    &__form {
+        width: 100%;
+        max-width: 1470px;
+    }
+
+    &__cols {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: clamp-calc(20px, 30px);
+
+        @include tablet-small {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__submit-wrap {
+        display: flex;
+        align-items: center;
+        gap: clamp-calc(20px, 40px);
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+}

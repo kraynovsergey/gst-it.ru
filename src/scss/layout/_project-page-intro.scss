@@ -1,0 +1,89 @@
+.project-page-intro {
+    background: #ede9f6;
+    border-radius: 0 0 0 clamp-calc(20px, 30px);
+    margin-top: calc(clamp-calc(20px, 30px) * -1);
+    position: relative;
+
+    @include tablet-small {
+        border-radius: 0 0 clamp-calc(20px, 30px) clamp-calc(20px, 30px);
+    }
+
+    &__icon {
+        position: absolute;
+        width: clamp-calc(200px, 400px);
+        height: auto;
+        left: 52%;
+        top: calc(50% - clamp-calc(100px, 200px));
+        color: #E5DEF3;
+
+        @include tablet-small {
+            left: calc(50% - clamp-calc(100px, 200px));
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: .55fr .45fr;
+        gap: clamp-calc(30px, 340px);
+        z-index: 2;
+
+        @include desktop-small {
+            gap: 30px;
+        }
+
+        @include tablet-small {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: clamp-calc(20px, 40px) 0;
+
+        @include tablet-small {
+            padding-bottom: 0;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: clamp-calc(30px, 150px) 0;
+
+        @include tablet-small {
+            padding: 0;
+        }
+
+        &._sale {
+            padding-top: clamp-calc(20px, 40px);
+
+            & .sale__icon {
+                margin-bottom: clamp-calc(20px, 30px);
+            }
+        }
+    }
+
+    &__title {
+        font-size: clamp-calc(22px, 60px);
+        font-weight: 600;
+        margin: 0 0 clamp-calc(20px, 40px);
+        padding: 0;
+    }
+
+    &__subtitle {
+        margin: 0 0 clamp-calc(30px, 60px);
+        font-size: clamp-calc(16px, 28px);
+    }
+
+    &__picture {
+        margin-right: calc(clamp-calc(15px, 80px) * -1);
+
+        @include tablet-small {
+            margin-left: calc(clamp-calc(15px, 80px) * -1);
+            border-radius: 0 0 clamp-calc(20px, 30px) clamp-calc(20px, 30px);
+        }
+    }
+}

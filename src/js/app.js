@@ -1,0 +1,12 @@
+import "./modules/lenis.js";
+import "./modules/aos.js";
+import "./modules/lazy.js";
+import "./modules/form.js";
+import "./modules/swiper.js";
+import "./modules/accordion.js";
+import "./modules/fancybox.js";
+import "./modules/search.js";
+import "./modules/cookies.js";
+import "./modules/tabs.js";
+import "./modules/value.js";
+import "./modules/vacancies.js";

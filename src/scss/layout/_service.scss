@@ -1,0 +1,120 @@
+.service {
+    @include tablet-small {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &._active {
+        @include tablet-small {
+            gap: clamp-calc(20px, 40px);
+        }
+
+        & .service__btn {
+            background: $color_primary;
+            color: $color_white;
+            box-shadow: none;
+
+            &-arrow {
+                background: $color_gold;
+                box-shadow: none;
+                color: $color_primary;
+            }
+
+            &-bg {
+                background: linear-gradient(127deg, #3d2a87 0%, #3d2a87 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    &__btn {
+        padding: clamp-calc(20px, 40px) clamp-calc(15px, 50px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp-calc(30px, 100px);
+        width: 100%;
+        background: $color_bg;
+        text-align: left;
+        position: relative;
+        font-size: clamp-calc(18px, 24px);
+        color: $color_primary;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            @include tablet-from {
+                & .service__btn-arrow {
+                    background: $color_gold;
+                }
+            }
+        }
+
+        &-bg {
+            position: absolute;
+            right: 0;
+            font-weight: 300;
+            font-size: clamp-calc(16px, 20px);
+            background: linear-gradient(127deg, #fbf8ff 0%, #eadef7 100%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            z-index: 1;
+        }
+
+        &-title {
+            z-index: 2;
+        }
+
+        &-arrow {
+            min-width: clamp-calc(30px, 50px);
+            max-width: clamp-calc(30px, 50px);
+            height: clamp-calc(30px, 50px);
+            background: $color_bg;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: .5s ease-in-out;
+
+            & svg {
+                width: 40%;
+                height: auto;
+            }
+        }
+    }
+
+    &__content {
+        background: $color_bg;
+        padding: 0 clamp-calc(15px, 65px) 0;
+
+        @include tablet-small-from {
+            position: absolute;
+            top: 0;
+            left: calc(100% + clamp-calc(20px, 40px));
+            width: calc(150% - clamp-calc(20px, 40px));
+        }
+    }
+
+    &__picture {
+        margin: 0 calc(clamp-calc(15px, 65px) * -1) clamp-calc(15px, 30px);
+    }
+
+    &__title {
+        margin: 0 0 clamp-calc(15px, 30px);
+        padding: 0;
+        font-weight: 600;
+        font-size: clamp-calc(18px, 30px)
+    }
+
+    &__text {
+        margin: 0 0 clamp-calc(15px, 30px);
+        font-size: clamp-calc(16px, 22px);
+    }
+
+    &__link-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-bottom: clamp-calc(15px, 40px);
+    }
+}

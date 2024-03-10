@@ -1,0 +1,10 @@
+.home-services {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: clamp-calc(20px, 40px);
+
+    @include tablet-small-from {
+        width: 40%;
+    }
+}

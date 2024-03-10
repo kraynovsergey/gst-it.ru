@@ -1,0 +1,48 @@
+.history {
+    display: grid;
+    grid-template-columns: .3fr .7fr;
+    align-items: start;
+    position: relative;
+    gap: clamp-calc(30px, 120px);
+
+    @include tablet {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    &__title {
+        @include tablet-from {
+            position: sticky;
+            top: calc(clamp-calc(50px, 80px) + 15px);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        gap: clamp-calc(30px, 40px);
+        position: relative;
+
+        &::before {
+            content: '';
+            left: clamp-calc(15px, 20px);
+            top: 9%;
+            bottom: 12%;
+            border-left: 1px dashed #7d73ab;
+            position: absolute;
+            z-index: 1;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &._icon {
+            &::before {
+                left: clamp-calc(20px, 35px);
+                bottom: 9%;
+                border-color: #7D73AB;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.career-types {
+    margin: 0;
+    position: relative;
+    display: flex;
+
+    & figcaption {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgb(41, 23, 112, .7);
+        padding: clamp-calc(20px, 45px) clamp-calc(15px, 50px);
+        color: $color_white;
+        font-size: clamp-calc(16px, 30px);
+        font-weight: 600;
+    }
+}

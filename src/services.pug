@@ -1,0 +1,20 @@
+extends base
+
+block meta
+    - var seotitle = 'Услуги'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Хлебные крошки
+    .breadcrumbs(data-aos="fade-up")
+        .container
+            ul.breadcrumbs__list.list-reset
+                li 
+                    a(href="home.html") Главная
+                li Услуги
+
+    .container
+        h1.h1(data-aos="fade-right") Услуги
+
+        include pug/layout/_services

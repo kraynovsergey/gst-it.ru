@@ -1,0 +1,78 @@
+/* CORE */
+@import "core/_variables";
+@import "core/_clamp";
+@import "core/_breakpoints";
+@import "core/_normalize";
+@import "core/_fonts";
+@import "core/_default";
+@import "core/_grid";
+
+/* VENDOR */
+@import "../../node_modules/swiper/swiper-bundle.min.css";
+@import "../../node_modules/aos/dist/aos.css";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css";
+
+/* COMPONENTS */
+@import "components/_lenis";
+@import "components/_btn";
+@import "components/_link";
+@import "components/_picture";
+@import "components/_radius";
+@import "components/_shadow";
+@import "components/_scroll";
+@import "components/_lazy";
+@import "components/_list";
+@import "components/_animation";
+@import "components/_section";
+@import "components/_accordion";
+@import "components/_swiper";
+@import "components/_video";
+@import "components/_form";
+@import "components/_fancybox";
+@import "components/_modal";
+@import "components/_typography";
+
+/* LAYOUT */
+@import "layout/_header";
+@import "layout/_search-form";
+@import "layout/_main";
+@import "layout/_home-intro";
+@import "layout/_home-numbers";
+@import "layout/_home-about";
+@import "layout/_chief";
+@import "layout/_home-projects";
+@import "layout/_project";
+@import "layout/_home-services";
+@import "layout/_service";
+@import "layout/_product";
+@import "layout/_sale";
+@import "layout/_partner";
+@import "layout/_confidence";
+@import "layout/_news";
+@import "layout/_footer-form";
+@import "layout/_footer";
+@import "layout/_city";
+@import "layout/_cookies";
+@import "layout/_breadcrumbs";
+@import "layout/_tabs";
+@import "layout/_contact";
+@import "layout/_not-found";
+@import "layout/_about-intro";
+@import "layout/_history";
+@import "layout/_history-item";
+@import "layout/_blog-items";
+@import "layout/_news-page";
+@import "layout/_career-intro";
+@import "layout/_career-about";
+@import "layout/_value";
+@import "layout/_care";
+@import "layout/_career-types";
+@import "layout/_vacancies";
+@import "layout/_vacancy-page";
+@import "layout/_products";
+@import "layout/_product-sale";
+@import "layout/_equipment";
+@import "layout/_project-page-intro";
+@import "layout/_targets";
+@import "layout/_solutions";
+@import "layout/_actual";

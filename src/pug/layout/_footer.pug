@@ -1,0 +1,66 @@
+footer.footer
+    section.footer-form.radius-60
+        .footer-form__numbers 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1
+        .container.footer-form__container
+            .footer-form__content.radius-30
+                h3.footer-form__title Отправьте заявку для получения консультации
+                form.footer-form__form.form(action="#" method="post" data-policy-form)
+                    .footer-form__cols
+                        input.form__input.radius-10(type="text" name="name" placeholder="Имя*")
+                        input.form__input.radius-10(type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel)
+                        input.form__input.radius-10(type="email" name="email" placeholder="Почта*")
+                        input.form__input.radius-10(type="text" name="company" placeholder="Компания")
+                        input.form__input.radius-10(type="text" name="position" placeholder="Должность")
+
+                    textarea.form__textarea.radius-10(name="message" placeholder="Комментарий")
+
+                    .footer-form__submit-wrap
+                        button.form__submit.btn.btn-reset._gold(type="submit" data-policy-submit) Оставить заявку
+                        .footer-form__required.form__required <span>*</span>Обязательно для заполнения
+
+                    .form__checkbox
+                        input.form__checkbox-input(type="checkbox" name="privacy_policy" id="footer-form-privacy-policy" data-policy)
+                        label.form__checkbox-label(for="footer-form-privacy-policy") 
+                            span.form__checkbox-label-check
+                            span Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет
+
+    section.footer__content
+        .footer__main
+            .container.footer__main-container
+                h3.footer__title Контакты
+
+                .footer__header
+                    address.footer__contacts
+                        a.footer__contact(href="tel:88002503147") 8 (800) 250-31-47
+                        a.footer__contact(href="mailto:sales@gst-it.ru") sales@gst-it.ru
+
+                    .footer__accreditation Аккредитовано
+                        +sprite('', 211, 46, 'mincifry')
+
+                .swiper.footer__cities._full-width-tablet(data-swiper-cities)
+                    .swiper-wrapper
+                        mixin city(icon, title, text)
+                            article.city.radius-30
+                                .city__numbers 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                                +sprite('city__icon', 80, 80, icon)
+                                h3.city__title=title
+                                p.city__text=text
+
+                        .swiper-slide._equal-height
+                            +city('city-moscow', 'Москва', 'БЦ «Парк Победы», ул. Василисы Кожиной, д.1, секция 3, этаж 8, офис 803.1')
+                        .swiper-slide._equal-height
+                            +city('city-spb', 'Санкт-Петербург', 'Сотрудники Санкт-Петербургского подразделения трудятся удаленно')
+                        .swiper-slide._equal-height
+                            +city('city-samara', 'Самара', 'ул. Ново-Садовая, д.139, 1 подъезд, 11 этаж')
+                        .swiper-slide._equal-height
+                            +city('city-saransk', 'Саранск', 'Сотрудники Саранского подразделения трудятся удаленно')
+
+        .footer__bottom
+            .container.footer__bottom-container
+                .footer__bottom-item © Компания GST, 2024
+                a.footer__bottom-link(href="privacy-policy.html") Политика конфиденциальности
+                a.footer__bottom-link(href="privacy-policy.html") Согласие на обработку персональных данных
+
+
+
+

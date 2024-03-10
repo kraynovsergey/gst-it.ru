@@ -1,0 +1,122 @@
+.swiper {
+    &._full-width {
+        margin: 0 calc(clamp-calc(15px, 80px) * -1);
+        padding: 0 clamp-calc(15px, 80px);
+    }
+
+    &._full-width-tablet {
+        @include tablet {
+            margin: 0 calc(clamp-calc(15px, 80px) * -1);
+            padding: 0 clamp-calc(15px, 80px);
+        }
+
+        &._shadow-full {
+            padding-top: 15px;
+            padding-bottom: 25px;
+            margin-top: -15px;
+            margin-bottom: -25px;
+    
+            @include tablet-from {
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+        }
+    }
+
+    &._shadow-vertical {
+        padding-top: 15px;
+        padding-bottom: 25px;
+        margin-top: -15px;
+        margin-bottom: -25px;
+    }
+
+    &-slide {
+        &._equal-height {
+            height: unset;
+        }
+    }
+
+    &__header {
+        position: relative;
+        margin-bottom: clamp-calc(20px, 40px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        & .section__title {
+            margin-bottom: 0;
+        }
+    }
+
+    &__navs {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__nav {
+        transition: .5s ease-in-out;
+        min-width: clamp-calc(40px, 60px);
+        max-width: clamp-calc(40px, 60px);
+        height: clamp-calc(40px, 60px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color_primary;
+        background: $color_bg;
+
+        &:not(:disabled) {
+            &:hover {
+                @include tablet-from {
+                    background: $color_gold;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        &:disabled {
+            opacity: .2;
+            cursor: not-allowed;
+        }
+
+        &._prev {
+            & svg {
+                transform: rotate(180deg);   
+            }
+        }
+
+        & svg {
+            width: 50%;
+            height: auto;
+        }
+    }
+
+    &__pagination {
+        margin-top: clamp-calc(20px, 40px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+
+        & .swiper-pagination-bullet {
+            min-width: 15px;
+            max-width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #7d73ab;
+            opacity: 1;
+            transition: .5s ease-in-out;
+            margin: 0;
+
+            &-active {
+                background: $color_primary;
+            }
+        }
+    }
+}

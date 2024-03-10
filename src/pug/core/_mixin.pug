@@ -1,0 +1,47 @@
+mixin sprite(classname, width, height, id)
+    svg(class=classname width=width height=height)
+        use(xlink:href="@img/icons/icons.svg#"+id)
+
+mixin picture(classname, img, format, width, height, alt, aos)
+    picture(class=classname data-aos=aos)
+        source(type="image/webp" data-srcset="@img/"+img+".webp 1x, @img/"+img+"@2x.webp 2x")
+        img.lazy(src="@img/"+img+"."+format data-srcset="@img/"+img+"."+format+" 1x, "+img+"@2x."+format+" 2x" alt=alt width=width height=height)
+
+mixin about(icon, title, subtitle, delay)
+    .swiper-slide._equal-height
+        article.home-about__item.radius-30.shadow(data-aos="fade-up" data-aos-delay=delay)
+            +sprite('home-about__icon', 50, 50, icon)
+            h3.home-about__title=title
+            p.home-about__subtitle=subtitle
+
+mixin news(img, date, title, tag, aos)
+    article.news.radius-20.shadow(data-aos=aos)
+        +picture('news__picture picture radius-20', img, 'jpg', 560, 318, title)
+        .news__content
+            time.news__date(datetime="2022-12-22")=date
+            h3.news__title
+                a.news__link.link._full(href="news-page.html")=title
+            ul.news__tags.list-reset
+                span #новости
+                span=tag
+
+mixin vacancy(city, title)
+    article.vacancies__item.radius-30.shadow(data-aos="fade-up" data-vacancies-item)
+        .vacancies__city=city
+        h3.vacancies__title=title
+        a.btn.btn-reset._bordered.link._full(href="vacancy.html") Подробнее
+
+mixin product(icon, title)
+    article.product.radius-30.shadow
+        +sprite('product__icon-right', 90, 90, icon)
+        +sprite('product__icon', 60, 60, icon)
+        h3.product__title 
+            a.product__link.link._full(href="product.html")=title
+
+mixin project(title, link, icon, delay)
+    article.project.radius-30.shadow(data-aos="fade-up")
+        h3.project__title=title
+        a.project__btn.btn-reset.radius-10.shadow.link._full(href=link) 
+            +sprite('', 41, 16, 'arrow-right')
+        if icon
+            img.project__icon(src="@img/tmp/projects/"+icon)

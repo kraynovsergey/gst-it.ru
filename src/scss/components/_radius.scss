@@ -1,0 +1,36 @@
+.radius-10 {
+    border-radius: clamp-calc(5px, 10px);
+    overflow: hidden;
+}
+
+.radius-20 {
+    border-radius: clamp-calc(15px, 20px);
+    overflow: hidden;
+}
+
+.radius-30 {
+    border-radius: clamp-calc(20px, 30px);
+    overflow: hidden;
+}
+
+.radius-right-30 {
+    border-radius: 0 clamp-calc(20px, 30px) clamp-calc(20px, 30px) 0;
+    overflow: hidden;
+}
+
+.radius-bottom-30 {
+    border-radius: 0 0 clamp-calc(20px, 30px) clamp-calc(20px, 30px);
+    overflow: hidden;
+}
+
+.radius-left-30 {
+    border-radius: clamp-calc(20px, 30px) 0 0 clamp-calc(20px, 30px);
+    overflow: hidden;
+}
+
+.radius-60 {
+    border-radius: clamp-calc(30px, 60px);
+    overflow: hidden;
+}
+
+

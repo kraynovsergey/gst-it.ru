@@ -1,0 +1,16 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp-calc(30px, 60px);
+    padding-top: clamp-calc(30px, 60px);
+
+    &__icon {
+        width: clamp-calc(250px, 833px);
+        height: auto;
+    }
+
+    &__title {
+        margin-bottom: 0;
+    }
+}

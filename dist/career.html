@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="preload" href="css/style.min.css" as="style" fetchpriority="high">
+    <link rel="preload" href="js/app.min.js" as="script" fetchpriority="high">
+    <title>Карьера</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container"><a class="header__logo" href="home.html">
+          <svg width="148" height="60">
+            <use xlink:href="img/icons/icons.svg#logo"></use>
+          </svg></a>
+        <div class="header__nav-wrapper">
+          <nav class="header__nav">
+            <ul class="header__list list-reset">
+              <li><a href="products.html">Продукты</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a href="projects.html">Проекты</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li class="_active"><a href="career.html">Карьера</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__search-wrap">
+            <button class="header__search-btn btn-reset" type="button" data-search-form-open>
+                  <svg class="search-form__icon" width="22" height="22">
+                    <use xlink:href="img/icons/icons.svg#search"></use>
+                  </svg>
+            </button>
+          </div>
+          <form class="search-form" action="#" method="post" data-search-form>
+                <svg class="search-form__icon" width="22" height="22">
+                  <use xlink:href="img/icons/icons.svg#search"></use>
+                </svg>
+            <input class="search-form__input" type="text" name="search" minlength="3" placeholder="Поиск по сайту" required>
+            <button class="search-form__close btn-reset" type="button" data-search-form-close>
+                  <svg width="24" height="24">
+                    <use xlink:href="img/icons/icons.svg#modal-close"></use>
+                  </svg>
+            </button>
+          </form>
+        </div><a class="header__link" href="tel:88002503147">
+          <svg width="24" height="24">
+            <use xlink:href="img/icons/icons.svg#phone"></use>
+          </svg><span>8 (800) 250-31-47</span></a><a class="header__link" href="mailto:sales@gst-it.ru">
+          <svg width="24" height="24">
+            <use xlink:href="img/icons/icons.svg#phone"></use>
+          </svg><span>sales@gst-it.ru</span></a>
+        <button class="header__btn btn _blue btn-reset" type="button" data-fancybox data-src="#modal-order">Оставить заявку</button>
+        <button class="header__burger btn-reset" type="button" data-fancybox data-src="#mobile-nav"><span></span><span></span><span></span></button>
+      </div>
+      <div class="header__modal" id="mobile-nav" data-lenis-prevent>
+        <button class="modal__close btn-reset" type="button" data-fancybox-close>
+          <svg width="30" height="30">
+            <use xlink:href="img/icons/icons.svg#modal-close"></use>
+          </svg>
+        </button>
+        <div class="header__modal-content">
+          <nav class="header__nav">
+            <form class="search-form _mobile" action="#" method="post">
+                  <svg class="search-form__icon" width="22" height="22">
+                    <use xlink:href="img/icons/icons.svg#search"></use>
+                  </svg>
+              <input class="search-form__input" type="text" name="search" minlength="3" placeholder="Поиск по сайту" required>
+            </form>
+            <ul class="header__list list-reset">
+              <li><a href="products.html">Продукты</a></li>
+              <li><a href="services.html">Услуги</a></li>
+              <li><a href="projects.html">Проекты</a></li>
+              <li><a href="about.html">О нас</a></li>
+              <li class="_active"><a href="career.html">Карьера</a></li>
+              <li><a href="blog.html">Блог</a></li>
+              <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__modal-footer"><a class="header__link" href="tel:88002503147">
+              <svg width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#phone"></use>
+              </svg><span>8 (800) 250-31-47</span></a><a class="header__link" href="mailto:sales@gst-it.ru">
+              <svg width="24" height="24">
+                <use xlink:href="img/icons/icons.svg#phone"></use>
+              </svg><span>sales@gst-it.ru</span></a>
+            <button class="header__btn btn _blue btn-reset" type="button" data-fancybox data-src="#modal-order">Оставить заявку</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <!--Интро-->
+      <section class="career-intro radius-bottom-30">
+        <div class="container career-intro__container">
+          <div class="career-intro__content">
+            <!--Хлебные крошки-->
+            <div class="breadcrumbs" data-aos="fade-up">
+              <ul class="breadcrumbs__list list-reset">
+                <li> <a href="home.html">Главная</a></li>
+                <li>Карьера</li>
+              </ul>
+            </div>
+            <div class="career-intro__text">
+              <h1 class="career-intro__title" data-aos="fade-right">Карьера в компании GST</h1>
+              <p class="career-intro__subtitle" data-aos="fade-right">Присоединяйся к команде сильных — стань частью GST</p>
+            </div>
+          </div>
+          <div class="career-intro__gallery" data-aos="fade-left">
+                <picture class="career-intro__picture _small picture radius-30 _cover">
+                  <source type="image/webp" data-srcset="img/tmp/career/career-intro-small.webp 1x, img/tmp/career/career-intro-small@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-intro-small.jpg" data-srcset="img/tmp/career/career-intro-small.jpg 1x, tmp/career/career-intro-small@2x.jpg 2x" alt="Карьера в компании GST" width="260" height="300">
+                </picture>
+                <picture class="career-intro__picture picture radius-30 _cover">
+                  <source type="image/webp" data-srcset="img/tmp/career/career-intro.webp 1x, img/tmp/career/career-intro@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-intro.jpg" data-srcset="img/tmp/career/career-intro.jpg 1x, tmp/career/career-intro@2x.jpg 2x" alt="Карьера в компании GST" width="449" height="300">
+                </picture>
+                <picture class="career-intro__picture picture radius-30 _cover">
+                  <source type="image/webp" data-srcset="img/tmp/career/career-intro.webp 1x, img/tmp/career/career-intro@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-intro.jpg" data-srcset="img/tmp/career/career-intro.jpg 1x, tmp/career/career-intro@2x.jpg 2x" alt="Карьера в компании GST" width="449" height="300">
+                </picture>
+                <picture class="career-intro__picture _small picture radius-30 _cover">
+                  <source type="image/webp" data-srcset="img/tmp/career/career-intro-small.webp 1x, img/tmp/career/career-intro-small@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-intro-small.jpg" data-srcset="img/tmp/career/career-intro-small.jpg 1x, tmp/career/career-intro-small@2x.jpg 2x" alt="Карьера в компании GST" width="260" height="300">
+                </picture>
+                <picture class="career-intro__picture _small picture radius-30 _cover">
+                  <source type="image/webp" data-srcset="img/tmp/career/career-intro-small.webp 1x, img/tmp/career/career-intro-small@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-intro-small.jpg" data-srcset="img/tmp/career/career-intro-small.jpg 1x, tmp/career/career-intro-small@2x.jpg 2x" alt="Карьера в компании GST" width="260" height="300">
+                </picture>
+                <picture class="career-intro__picture picture radius-30 _cover">
+                  <source type="image/webp" data-srcset="img/tmp/career/career-intro.webp 1x, img/tmp/career/career-intro@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-intro.jpg" data-srcset="img/tmp/career/career-intro.jpg 1x, tmp/career/career-intro@2x.jpg 2x" alt="Карьера в компании GST" width="449" height="300">
+                </picture>
+                <picture class="career-intro__picture picture radius-30 _cover">
+                  <source type="image/webp" data-srcset="img/tmp/career/career-intro.webp 1x, img/tmp/career/career-intro@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-intro.jpg" data-srcset="img/tmp/career/career-intro.jpg 1x, tmp/career/career-intro@2x.jpg 2x" alt="Карьера в компании GST" width="449" height="300">
+                </picture>
+                <picture class="career-intro__picture _small picture radius-30 _cover">
+                  <source type="image/webp" data-srcset="img/tmp/career/career-intro-small.webp 1x, img/tmp/career/career-intro-small@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-intro-small.jpg" data-srcset="img/tmp/career/career-intro-small.jpg 1x, tmp/career/career-intro-small@2x.jpg 2x" alt="Карьера в компании GST" width="260" height="300">
+                </picture>
+          </div>
+        </div>
+      </section>
+      <!--О нас-->
+      <section class="section _pb0">
+        <div class="container career-about">
+          <div class="career-about__content radius-30 shadow" data-aos="fade-right">
+            <h2 class="career-about__title">О работе у нас</h2>
+            <h3 class="career-about__subtitle">Компания GST — это место профессионалов, где существует культура доверия и открытости. </h3>
+            <div class="career-about__text text">
+              <p>Именно поэтому мы всегда в поисках профессионалов, горящих своим делом и нацеленных на результат: от выпускников вузов до ведущих специалистов и руководителей отделов. </p>
+              <p>Мы не просто предоставляем возможность, нам важно, чтобы каждый сотрудник мог предложить идею и стремился реализовать её! Благодаря этому мы не боимся изменений, а с радостью видим в сложных задачах - новые возможности. </p>
+              <p>Присоединяйся к команде сильных - стань частью GST!</p>
+            </div>
+          </div>
+              <picture class="career-about__picture radius-30 picture _cover" data-aos="fade-left">
+                <source type="image/webp" data-srcset="img/tmp/career/career-about.webp 1x, img/tmp/career/career-about@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-about.jpg" data-srcset="img/tmp/career/career-about.jpg 1x, tmp/career/career-about@2x.jpg 2x" alt="О работе у нас" width="710" height="553">
+              </picture>
+        </div>
+      </section>
+      <div class="section _pb0">
+        <div class="container">
+          <div class="career-about__big">
+            <div class="career-about__big-numbers _left">1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+            <div class="career-about__big-numbers _right">1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+            <div class="career-about__big-text shadow radius-10" data-aos="zoom-in">Нам важно, чтобы <span>каждый сотрудник</span> мог предложить идею и <span>реализовать её</span>.</div>
+          </div>
+        </div>
+      </div>
+      <!--Наши ценности-->
+      <section class="section _pb0">
+        <div class="container">
+          <h2 class="section__title" data-aos="fade-right">Наши ценности</h2>
+          <div class="swiper _shadow-vertical _full-width" data-swiper-home-about>
+            <div class="swiper-wrapper home-about__items _about">
+              <div class="swiper-slide _equal-height">
+                          <article class="value shadow radius-30" data-value data-aos="fade-up" data-aos-delay="0">
+                            <div class="value__text text">
+                              <p>Мы ценим принцип современности: Work – Life Balance!</p>
+                              <p>Время - наш ценный актив, он намного важнее денег, поскольку деньги можно заработать, но потраченное время нельзя восстановить. И мы всегда учимся быть гибким настолько, чтобы быстро и качественно выполнять рабочие задачи, но при этом иметь время и силы на внерабочую жизнь.</p>
+                            </div>
+                            <div class="value__content">
+                              <h3 class="value__title">Время</h3>
+                              <div class="value__icon">
+                                    <svg width="120" height="120">
+                                      <use xlink:href="img/icons/icons.svg#values-1"></use>
+                                    </svg>
+                              </div>
+                            </div>
+                          </article>
+              </div>
+              <div class="swiper-slide _equal-height">
+                          <article class="value shadow radius-30" data-value data-aos="fade-up" data-aos-delay="200">
+                            <div class="value__text text">
+                              <p>Мы ценим принцип современности: Work – Life Balance!</p>
+                              <p>Время - наш ценный актив, он намного важнее денег, поскольку деньги можно заработать, но потраченное время нельзя восстановить. И мы всегда учимся быть гибким настолько, чтобы быстро и качественно выполнять рабочие задачи, но при этом иметь время и силы на внерабочую жизнь.</p>
+                            </div>
+                            <div class="value__content">
+                              <h3 class="value__title">Непрерывное развитие</h3>
+                              <div class="value__icon">
+                                    <svg width="120" height="120">
+                                      <use xlink:href="img/icons/icons.svg#values-2"></use>
+                                    </svg>
+                              </div>
+                            </div>
+                          </article>
+              </div>
+              <div class="swiper-slide _equal-height">
+                          <article class="value shadow radius-30" data-value data-aos="fade-up" data-aos-delay="400">
+                            <div class="value__text text">
+                              <p>Мы ценим принцип современности: Work – Life Balance!</p>
+                              <p>Время - наш ценный актив, он намного важнее денег, поскольку деньги можно заработать, но потраченное время нельзя восстановить. И мы всегда учимся быть гибким настолько, чтобы быстро и качественно выполнять рабочие задачи, но при этом иметь время и силы на внерабочую жизнь.</p>
+                            </div>
+                            <div class="value__content">
+                              <h3 class="value__title">Команда</h3>
+                              <div class="value__icon">
+                                    <svg width="120" height="120">
+                                      <use xlink:href="img/icons/icons.svg#values-3"></use>
+                                    </svg>
+                              </div>
+                            </div>
+                          </article>
+              </div>
+              <div class="swiper-slide _equal-height">
+                          <article class="value shadow radius-30" data-value data-aos="fade-up" data-aos-delay="600">
+                            <div class="value__text text">
+                              <p>Мы ценим принцип современности: Work – Life Balance!</p>
+                              <p>Время - наш ценный актив, он намного важнее денег, поскольку деньги можно заработать, но потраченное время нельзя восстановить. И мы всегда учимся быть гибким настолько, чтобы быстро и качественно выполнять рабочие задачи, но при этом иметь время и силы на внерабочую жизнь.</p>
+                            </div>
+                            <div class="value__content">
+                              <h3 class="value__title">Клиентоориенти-рованность</h3>
+                              <div class="value__icon">
+                                    <svg width="120" height="120">
+                                      <use xlink:href="img/icons/icons.svg#values-4"></use>
+                                    </svg>
+                              </div>
+                            </div>
+                          </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Забота-->
+      <section class="section _pb0">
+        <div class="container">
+          <h2 class="section__title" data-aos="fade-right">Мы заботимся о своих сотрудниках и предлагаем лучшие условия</h2>
+          <div class="care">
+            <div class="care__items">
+              <div class="swiper _full-width-tablet _shadow-full" data-swiper-care>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide _equal-height" data-aos="fade-up">
+                                    <article class="care__item shadow radius-30">
+                                          <svg class="care__icon" width="50" height="50">
+                                            <use xlink:href="img/icons/icons.svg#care-1"></use>
+                                          </svg>
+                                      <h3 class="care__title">Доход</h3>
+                                      <ul class="care__list list-reset">
+                                        <li>Достойный уровень оплаты труда, а также премии за реализованные идеи.</li>
+                                      </ul>
+                                    </article>
+                  </div>
+                  <div class="swiper-slide _equal-height" data-aos="fade-up">
+                                    <article class="care__item shadow radius-30">
+                                          <svg class="care__icon" width="50" height="50">
+                                            <use xlink:href="img/icons/icons.svg#care-2"></use>
+                                          </svg>
+                                      <h3 class="care__title">Развитие</h3>
+                                      <ul class="care__list list-reset">
+                                        <li>Система наставничества и обмена знаниями.</li>
+                                        <li>Возможность карьерного роста как внутри отделов, так и в смежных подразделениях.</li>
+                                      </ul>
+                                    </article>
+                  </div>
+                  <div class="swiper-slide _equal-height" data-aos="fade-up">
+                                    <article class="care__item shadow radius-30">
+                                          <svg class="care__icon" width="50" height="50">
+                                            <use xlink:href="img/icons/icons.svg#care-3"></use>
+                                          </svg>
+                                      <h3 class="care__title">Комфорт</h3>
+                                      <ul class="care__list list-reset">
+                                        <li>Удобные и эргономичные рабочие места.</li>
+                                        <li>Просторная кухня и никаких крошек в клавиатуре.</li>
+                                        <li>Лаунж-зоны, чтобы перевести дыхание.</li>
+                                      </ul>
+                                    </article>
+                  </div>
+                  <div class="swiper-slide _equal-height" data-aos="fade-up">
+                                    <article class="care__item shadow radius-30">
+                                          <svg class="care__icon" width="50" height="50">
+                                            <use xlink:href="img/icons/icons.svg#care-4"></use>
+                                          </svg>
+                                      <h3 class="care__title">Семья</h3>
+                                      <ul class="care__list list-reset">
+                                        <li>Новогодние подарки для детей.</li>
+                                        <li>Совместный отдых на корпоративных мероприятиях.</li>
+                                        <li>Дополнительный выходной на знаковое событие (свадьба, рождение детей).</li>
+                                      </ul>
+                                    </article>
+                  </div>
+                  <div class="swiper-slide _equal-height" data-aos="fade-up">
+                                    <article class="care__item shadow radius-30">
+                                          <svg class="care__icon" width="50" height="50">
+                                            <use xlink:href="img/icons/icons.svg#care-5"></use>
+                                          </svg>
+                                      <h3 class="care__title">Время</h3>
+                                      <ul class="care__list list-reset">
+                                        <li>Офисы, расположенные в 10 минутах от метро.</li>
+                                        <li>Возможность частично удаленной работы.</li>
+                                      </ul>
+                                    </article>
+                  </div>
+                  <div class="swiper-slide _equal-height" data-aos="fade-up">
+                                    <article class="care__item shadow radius-30">
+                                          <svg class="care__icon" width="50" height="50">
+                                            <use xlink:href="img/icons/icons.svg#care-6"></use>
+                                          </svg>
+                                      <h3 class="care__title">Здоровье</h3>
+                                      <ul class="care__list list-reset">
+                                        <li>100% оплачиваемый больничный.</li>
+                                        <li>Сезонная вакцинация для желающих.</li>
+                                      </ul>
+                                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="care__gallery">
+              <div class="swiper__header" data-aos="fade-left">
+                <h2 class="care__gallery-title">Работать в команде — это круто!</h2>
+                <div class="swiper__navs">
+                  <button class="swiper__nav _prev radius-10 shadow btn-reset" type="button" data-swiper-care-gallery-prev>
+                        <svg width="31" height="16">
+                          <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+                        </svg>
+                  </button>
+                  <button class="swiper__nav _next radius-10 shadow btn-reset" type="button" data-swiper-care-gallery-next>
+                        <svg width="31" height="16">
+                          <use xlink:href="img/icons/icons.svg#arrow-right"></use>
+                        </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="care__gallery-wrapper" data-aos="fade-left" data-aos-delay="200">
+                    <picture class="care-gallery-bg picture">
+                      <source type="image/webp" data-srcset="img/tmp/career/career-care.webp 1x, img/tmp/career/career-care@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-care.png" data-srcset="img/tmp/career/career-care.png 1x, tmp/career/career-care@2x.png 2x" width="810" height="792">
+                    </picture>
+                <div class="swiper" data-swiper-care-gallery>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide _equal-height">
+                      <figure class="care__gallery-item">
+                            <picture class="picture">
+                              <source type="image/webp" data-srcset="img/tmp/career/career-care-img.webp 1x, img/tmp/career/career-care-img@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-care-img.jpg" data-srcset="img/tmp/career/career-care-img.jpg 1x, tmp/career/career-care-img@2x.jpg 2x" alt="Здесь мы отдыхаем" width="650" height="541">
+                            </picture>
+                        <figcaption>Здесь мы <span>отдыхаем</span></figcaption>
+                      </figure>
+                    </div>
+                    <div class="swiper-slide _equal-height">
+                      <figure class="care__gallery-item">
+                            <picture class="picture">
+                              <source type="image/webp" data-srcset="img/tmp/career/career-care-img.webp 1x, img/tmp/career/career-care-img@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-care-img.jpg" data-srcset="img/tmp/career/career-care-img.jpg 1x, tmp/career/career-care-img@2x.jpg 2x" alt="Здесь мы отдыхаем" width="650" height="541">
+                            </picture>
+                        <figcaption>Здесь мы <span>отдыхаем2</span></figcaption>
+                      </figure>
+                    </div>
+                    <div class="swiper-slide _equal-height">
+                      <figure class="care__gallery-item">
+                            <picture class="picture">
+                              <source type="image/webp" data-srcset="img/tmp/career/career-care-img.webp 1x, img/tmp/career/career-care-img@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-care-img.jpg" data-srcset="img/tmp/career/career-care-img.jpg 1x, tmp/career/career-care-img@2x.jpg 2x" alt="Здесь мы отдыхаем" width="650" height="541">
+                            </picture>
+                        <figcaption>Здесь мы <span>отдыхаем3</span></figcaption>
+                      </figure>
+                    </div>
+                  </div>
+                  <div class="care__gallery-pagination" data-swiper-care-gallery-pagination></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+      <div class="section _pb0">
+        <div class="container">
+          <div class="career-about__big">
+            <div class="career-about__big-numbers _left">1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+            <div class="career-about__big-numbers _right">1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+            <div class="career-about__big-text shadow radius-10" data-aos="zoom-in">Нам нужны <span>сотрудники:</span><small>Мы эффективно работаем в Москве и в регионах в разных форматах: <span>в офисе и удалено</span></small></div>
+          </div>
+        </div>
+      </div>
+      <!--Типы-->
+      <div class="section _pb0">
+        <div class="container">
+          <div class="swiper _shadow-vertical _full-width" data-swiper-home-about>
+            <div class="swiper-wrapper home-about__items _about">
+              <div class="swiper-slide _equal-height">
+                          <figure class="career-types radius-30" data-aos="fade-up" data-aos-delay="0">
+                                <picture class="picture">
+                                  <source type="image/webp" data-srcset="img/tmp/career/career-type.webp 1x, img/tmp/career/career-type@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-type.jpg" data-srcset="img/tmp/career/career-type.jpg 1x, tmp/career/career-type@2x.jpg 2x" width="410" height="285">
+                                </picture>
+                            <figcaption>Работа в продажах</figcaption>
+                          </figure>
+              </div>
+              <div class="swiper-slide _equal-height">
+                          <figure class="career-types radius-30" data-aos="fade-up" data-aos-delay="200">
+                                <picture class="picture">
+                                  <source type="image/webp" data-srcset="img/tmp/career/career-type.webp 1x, img/tmp/career/career-type@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-type.jpg" data-srcset="img/tmp/career/career-type.jpg 1x, tmp/career/career-type@2x.jpg 2x" width="410" height="285">
+                                </picture>
+                            <figcaption>Работа в офисе</figcaption>
+                          </figure>
+              </div>
+              <div class="swiper-slide _equal-height">
+                          <figure class="career-types radius-30" data-aos="fade-up" data-aos-delay="400">
+                                <picture class="picture">
+                                  <source type="image/webp" data-srcset="img/tmp/career/career-type.webp 1x, img/tmp/career/career-type@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-type.jpg" data-srcset="img/tmp/career/career-type.jpg 1x, tmp/career/career-type@2x.jpg 2x" width="410" height="285">
+                                </picture>
+                            <figcaption>Работа удаленно</figcaption>
+                          </figure>
+              </div>
+              <div class="swiper-slide _equal-height">
+                          <figure class="career-types radius-30" data-aos="fade-up" data-aos-delay="600">
+                                <picture class="picture">
+                                  <source type="image/webp" data-srcset="img/tmp/career/career-type.webp 1x, img/tmp/career/career-type@2x.webp 2x"><img class="lazy" src="img/tmp/career/career-type.jpg" data-srcset="img/tmp/career/career-type.jpg 1x, tmp/career/career-type@2x.jpg 2x" width="410" height="285">
+                                </picture>
+                            <figcaption>Работа студентам или молодым специалистам</figcaption>
+                          </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Вакансии-->
+      <section class="section _pb0">
+        <div class="container">
+          <h2 class="section__title" data-aos="fade-right">Вакансии</h2>
+          <div class="tabs-container">
+            <swiper class="swiper tabs _full-width-tablet" data-swiper-tabs>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide tabs__slide">
+                  <button class="tabs__item tab btn btn-reset _bordered asd active" type="button" data-aos="fade-up" data-aos-delay="0">Все города</button>
+                </div>
+                <div class="swiper-slide tabs__slide">
+                  <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up" data-aos-delay="200">Москва</button>
+                </div>
+                <div class="swiper-slide tabs__slide">
+                  <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up" data-aos-delay="400">Санкт-Петебург</button>
+                </div>
+                <div class="swiper-slide tabs__slide">
+                  <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up" data-aos-delay="600">Самара</button>
+                </div>
+                <div class="swiper-slide tabs__slide">
+                  <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up" data-aos-delay="800">Саранск</button>
+                </div>
+              </div>
+            </swiper>
+            <div class="tab-panes" data-aos="fade-up">
+              <div class="tab-pane active">
+                <div class="vacancies" data-vacancies>
+                  <div class="vacancies__items">
+                        <article class="vacancies__item radius-30 shadow" data-aos="fade-up" data-vacancies-item>
+                          <div class="vacancies__city">Самара</div>
+                          <h3 class="vacancies__title">Ведущий системный администратор</h3><a class="btn btn-reset _bordered link _full" href="vacancy.html">Подробнее</a>
+                        </article>
+                        <article class="vacancies__item radius-30 shadow" data-aos="fade-up" data-vacancies-item>
+                          <div class="vacancies__city">Самара</div>
+                          <h3 class="vacancies__title">Ведущий системный администратор</h3><a class="btn btn-reset _bordered link _full" href="vacancy.html">Подробнее</a>
+                        </article>
+                        <article class="vacancies__item radius-30 shadow" data-aos="fade-up" data-vacancies-item>
+                          <div class="vacancies__city">Самара</div>
+                          <h3 class="vacancies__title">Ведущий системный администратор</h3><a class="btn btn-reset _bordered link _full" href="vacancy.html">Подробнее</a>
+                        </article>
+                        <article class="vacancies__item radius-30 shadow" data-aos="fade-up" data-vacancies-item>
+                          <div class="vacancies__city">Самара</div>
+                          <h3 class="vacancies__title">Ведущий системный администратор</h3><a class="btn btn-reset _bordered link _full" href="vacancy.html">Подробнее</a>
+                        </article>
+                  </div>
+                  <div class="vacancies__more" data-aos="fade-down">
+                    <button class="btn btn-reset _blue" type="button" data-vacancies-more>Посмотреть все вакансии</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane">
+                <div class="vacancies" data-vacancies>
+                  <div class="vacancies__items">
+                        <article class="vacancies__item radius-30 shadow" data-aos="fade-up" data-vacancies-item>
+                          <div class="vacancies__city">Москва</div>
+                          <h3 class="vacancies__title">Ведущий системный администратор</h3><a class="btn btn-reset _bordered link _full" href="vacancy.html">Подробнее</a>
+                        </article>
+                  </div>
+                  <div class="vacancies__more" data-aos="fade-down">
+                    <button class="btn btn-reset _blue" type="button" data-vacancies-more>Посмотреть все вакансии</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane">
+                <div class="vacancies" data-vacancies>
+                  <div class="vacancies__items">
+                        <article class="vacancies__item radius-30 shadow" data-aos="fade-up" data-vacancies-item>
+                          <div class="vacancies__city">Санкт-Петербург</div>
+                          <h3 class="vacancies__title">Ведущий системный администратор</h3><a class="btn btn-reset _bordered link _full" href="vacancy.html">Подробнее</a>
+                        </article>
+                  </div>
+                  <div class="vacancies__more" data-aos="fade-down">
+                    <button class="btn btn-reset _blue" type="button" data-vacancies-more>Посмотреть все вакансии</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane">
+                <div class="vacancies" data-vacancies>
+                  <div class="vacancies__items">
+                        <article class="vacancies__item radius-30 shadow" data-aos="fade-up" data-vacancies-item>
+                          <div class="vacancies__city">Самара</div>
+                          <h3 class="vacancies__title">Ведущий системный администратор</h3><a class="btn btn-reset _bordered link _full" href="vacancy.html">Подробнее</a>
+                        </article>
+                  </div>
+                  <div class="vacancies__more" data-aos="fade-down">
+                    <button class="btn btn-reset _blue" type="button" data-vacancies-more>Посмотреть все вакансии</button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane">
+                <div class="vacancies" data-vacancies>
+                  <div class="vacancies__items">
+                        <article class="vacancies__item radius-30 shadow" data-aos="fade-up" data-vacancies-item>
+                          <div class="vacancies__city">Саранск</div>
+                          <h3 class="vacancies__title">Ведущий системный администратор</h3><a class="btn btn-reset _bordered link _full" href="vacancy.html">Подробнее</a>
+                        </article>
+                  </div>
+                  <div class="vacancies__more" data-aos="fade-down">
+                    <button class="btn btn-reset _blue" type="button" data-vacancies-more>Посмотреть все вакансии</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <section class="footer-form radius-60">
+        <div class="footer-form__numbers">1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+        <div class="container footer-form__container">
+          <div class="footer-form__content radius-30">
+            <h3 class="footer-form__title">Отправьте заявку для получения консультации</h3>
+            <form class="footer-form__form form" action="#" method="post" data-policy-form>
+              <div class="footer-form__cols">
+                <input class="form__input radius-10" type="text" name="name" placeholder="Имя*">
+                <input class="form__input radius-10" type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel>
+                <input class="form__input radius-10" type="email" name="email" placeholder="Почта*">
+                <input class="form__input radius-10" type="text" name="company" placeholder="Компания">
+                <input class="form__input radius-10" type="text" name="position" placeholder="Должность">
+              </div>
+              <textarea class="form__textarea radius-10" name="message" placeholder="Комментарий"></textarea>
+              <div class="footer-form__submit-wrap">
+                <button class="form__submit btn btn-reset _gold" type="submit" data-policy-submit>Оставить заявку</button>
+                <div class="footer-form__required form__required"><span>*</span>Обязательно для заполнения</div>
+              </div>
+              <div class="form__checkbox">
+                <input class="form__checkbox-input" type="checkbox" name="privacy_policy" id="footer-form-privacy-policy" data-policy>
+                <label class="form__checkbox-label" for="footer-form-privacy-policy"> <span class="form__checkbox-label-check"></span><span>Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет</span></label>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="footer__content">
+        <div class="footer__main">
+          <div class="container footer__main-container">
+            <h3 class="footer__title">Контакты</h3>
+            <div class="footer__header">
+              <address class="footer__contacts"><a class="footer__contact" href="tel:88002503147">8 (800) 250-31-47</a><a class="footer__contact" href="mailto:sales@gst-it.ru">sales@gst-it.ru</a></address>
+              <div class="footer__accreditation">Аккредитовано
+                    <svg width="211" height="46">
+                      <use xlink:href="img/icons/icons.svg#mincifry"></use>
+                    </svg>
+              </div>
+            </div>
+            <div class="swiper footer__cities _full-width-tablet" data-swiper-cities>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide _equal-height">
+                                  <article class="city radius-30">
+                                    <div class="city__numbers">1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+                                        <svg class="city__icon" width="80" height="80">
+                                          <use xlink:href="img/icons/icons.svg#city-moscow"></use>
+                                        </svg>
+                                    <h3 class="city__title">Москва</h3>
+                                    <p class="city__text">БЦ «Парк Победы», ул. Василисы Кожиной, д.1, секция 3, этаж 8, офис 803.1</p>
+                                  </article>
+                </div>
+                <div class="swiper-slide _equal-height">
+                                  <article class="city radius-30">
+                                    <div class="city__numbers">1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+                                        <svg class="city__icon" width="80" height="80">
+                                          <use xlink:href="img/icons/icons.svg#city-spb"></use>
+                                        </svg>
+                                    <h3 class="city__title">Санкт-Петербург</h3>
+                                    <p class="city__text">Сотрудники Санкт-Петербургского подразделения трудятся удаленно</p>
+                                  </article>
+                </div>
+                <div class="swiper-slide _equal-height">
+                                  <article class="city radius-30">
+                                    <div class="city__numbers">1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+                                        <svg class="city__icon" width="80" height="80">
+                                          <use xlink:href="img/icons/icons.svg#city-samara"></use>
+                                        </svg>
+                                    <h3 class="city__title">Самара</h3>
+                                    <p class="city__text">ул. Ново-Садовая, д.139, 1 подъезд, 11 этаж</p>
+                                  </article>
+                </div>
+                <div class="swiper-slide _equal-height">
+                                  <article class="city radius-30">
+                                    <div class="city__numbers">1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1</div>
+                                        <svg class="city__icon" width="80" height="80">
+                                          <use xlink:href="img/icons/icons.svg#city-saransk"></use>
+                                        </svg>
+                                    <h3 class="city__title">Саранск</h3>
+                                    <p class="city__text">Сотрудники Саранского подразделения трудятся удаленно</p>
+                                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <div class="container footer__bottom-container">
+            <div class="footer__bottom-item">© Компания GST, 2024</div><a class="footer__bottom-link" href="privacy-policy.html">Политика конфиденциальности</a><a class="footer__bottom-link" href="privacy-policy.html">Согласие на обработку персональных данных</a>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <div class="modal" id="modal-order" data-lenis-prevent>
+      <div class="modal__content radius-20">
+        <button class="modal__close btn-reset" type="button" data-fancybox-close>
+              <svg width="30" height="30">
+                <use xlink:href="img/icons/icons.svg#modal-close"></use>
+              </svg>
+        </button>
+        <h3 class="modal__title">Оставить заявку</h3>
+        <form class="form modal__form" action="#" method="post" data-policy-form>
+          <input class="form__input radius-10" type="text" name="name" placeholder="Имя*">
+          <input class="form__input radius-10" type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel>
+          <textarea class="form__textarea radius-10" name="message" placeholder="Комментарий"></textarea>
+          <button class="form__submit btn btn-reset _blue" type="submit" data-policy-submit data-open-thankyou>Оставить заявку</button>
+          <div class="form__checkbox">
+            <input class="form__checkbox-input" type="checkbox" name="privacy_policy" id="footer-form-modal" data-policy>
+            <label class="form__checkbox-label" for="footer-form-modal"> <span class="form__checkbox-label-check"></span><span>Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет</span></label>
+          </div>
+          <div class="form__required"><span>*</span>Обязательно для заполнения</div>
+        </form>
+      </div>
+    </div>
+    <div class="modal" id="modal-thankyou" data-lenis-prevent>
+      <div class="modal__content radius-20">
+        <button class="modal__close btn-reset" type="button" data-fancybox-close>
+              <svg width="30" height="30">
+                <use xlink:href="img/icons/icons.svg#modal-close"></use>
+              </svg>
+        </button>
+        <section class="modal__thankyou">
+          <h3 class="modal__title">Заявка принята</h3>
+          <p class="modal__text">Вскоре мы с вами свяжемся!</p>
+          <button class="modal__btn btn _blue btn-reset" type="button" data-fancybox-close>Хорошо, спасибо</button>
+        </section>
+      </div>
+    </div>
+    <div class="cookies" data-cookie>
+      <div class="container cookies__container">
+        <div class="cookies__text">Мы используем cookies на нашем сайте, чтобы сделать его удобнее для Вас. Продолжая его использовать, Вы подтверждаете своё согласие на <a href="privacy-policy.html">обработку персональных данных</a> в соответствии с <a href="privacy-policy.html">политикой конфиденциальности</a>.</div>
+        <button class="cookies__btn btn btn-reset _blue" type="button" data-cookie-approve>Соглашаюсь<img src="img/cookies.svg"></button>
+      </div>
+    </div>
+    <script defer src="js/app.min.js"></script>
+  </body>
+</html>

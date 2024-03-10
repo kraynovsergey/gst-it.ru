@@ -1,0 +1,11 @@
+body {
+	font-family: $font_family;
+	font-optical-sizing: auto;
+  	font-weight: normal;
+  	font-style: normal;
+	font-size: clamp-calc(16px, 20px);
+	color: $color_primary;
+	text-align: left;
+	background-color: $color_bg;
+	overflow-x: hidden;
+}

@@ -1,0 +1,24 @@
+extends base
+
+block meta
+    - var seotitle = 'Продукты'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Хлебные крошки
+    .breadcrumbs(data-aos="fade-up")
+        .container
+            ul.breadcrumbs__list.list-reset
+                li 
+                    a(href="home.html") Главная
+                li Продукты
+
+    .container
+        h1.h1(data-aos="fade-right") Продукты
+
+        .products(data-aos="fade-up")
+            +product('product-icon-1', 'Хранение и обработка данных')
+            +product('product-icon-2', 'Оснащение рабочих мест')
+            +product('product-icon-3', 'Безопасность')
+            +product('product-icon-4', 'Профессиональные AV решения')

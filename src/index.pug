@@ -1,0 +1,68 @@
+doctype html
+block html
+html(lang="ru")
+    head
+        block meta
+            - var seotitle = 'Список страниц'
+            - var seodescription = ''
+            - var seokeywords = ''
+
+        include pug/core/_meta
+
+    style(type="text/css").
+        .wrap {
+            width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 0;
+        }
+
+        .wrap__list {
+            font-size: 1.2rem;
+        }
+
+        .wrap__list li:not(:last-child) {
+            margin-bottom: .8rem;
+        }
+
+        .wrap__list a {
+            color: currentColor;
+            text-decoration: none;
+        }
+
+    body
+        .wrap
+            ol.wrap__list
+                li
+                    a(href="home.html" target="_blank") Главная страница
+                li
+                    a(href="contacts.html" target="_blank") Контакты
+                li
+                    a(href="text.html" target="_blank") Текстовая страница
+                li
+                    a(href="404.html" target="_blank") 404
+                li
+                    a(href="about.html" target="_blank") О нас
+                li
+                    a(href="blog.html" target="_blank") Блог
+                li
+                    a(href="news-page.html" target="_blank") Конкретная запись блога
+                li
+                    a(href="career.html" target="_blank") Карьера
+                li
+                    a(href="vacancy.html" target="_blank") Вакансия
+                li
+                    a(href="products.html" target="_blank") Продукты
+                li
+                    a(href="product.html" target="_blank") Продукт
+                li
+                    a(href="projects.html" target="_blank") Проекты
+                li
+                    a(href="project.html" target="_blank") Проект
+                li
+                    a(href="services.html" target="_blank") Услуги
+                li
+                    a(href="service.html" target="_blank") Услуга
+

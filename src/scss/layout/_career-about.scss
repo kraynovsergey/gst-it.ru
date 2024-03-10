@@ -1,0 +1,77 @@
+.career-about {
+    display: grid;
+    gap: clamp-calc(20px, 40px);
+
+    @include tablet-small-from {
+        grid-template-columns: .56fr .44fr;
+    }
+
+    &__content {
+        background: $color_bg;
+        display: flex;
+        flex-direction: column;
+        gap: clamp-calc(20px, 40px);
+        padding: clamp-calc(25px, 60px) clamp-calc(20px, 70px);
+    }
+
+    &__title,
+    &__subtitle {
+        font-weight: 500;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__title {
+        font-size: clamp-calc(22px, 45px);
+    }
+
+    &__subtitle {
+        font-size: clamp-calc(18px, 28px);
+    }
+
+    &__big {
+        padding: 0 35px;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &-text {
+            background: $color_bg;
+            padding: clamp-calc(15px, 30px) clamp-calc(20px, 65px);
+            text-align: center;
+            width: 100%;
+            font-size: clamp-calc(20px, 45px);
+            font-weight: 500;
+
+            & span {
+                color: $color_gold;
+            }
+
+            & small {
+                display: block;
+                font-size: clamp-calc(16px, 30px);
+                margin-top: clamp-calc(15px, 30px);
+            }
+        }
+
+        &-numbers {
+            font-weight: 300;
+            font-size: clamp-calc(20px, 50px);
+            position: absolute;
+
+            &._left {
+                background: linear-gradient(306deg, #fbf8ff 0%, #eadef7 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                left: 0;
+            }
+
+            &._right {
+                background: linear-gradient(127deg, #fbf8ff 0%, #eadef7 100%);
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                right: 0;
+            }
+        }
+    }
+}

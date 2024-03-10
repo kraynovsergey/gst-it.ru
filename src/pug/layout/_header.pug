@@ -1,0 +1,161 @@
+header.header
+    .container.header__container
+        a.header__logo(href="home.html")
+            svg(width="148" height="60")
+                use(xlink:href="@img/icons/icons.svg#logo")
+
+        .header__nav-wrapper
+            nav.header__nav
+                ul.header__list.list-reset
+                    if seotitle == 'Продукты'
+                        li._active
+                            a(href="products.html") Продукты
+                    else
+                        li
+                            a(href="products.html") Продукты
+
+                    if seotitle == 'Услуги'
+                        li._active
+                            a(href="services.html") Услуги
+                    else
+                        li
+                            a(href="services.html") Услуги
+
+                    if seotitle == 'Проекты'
+                        li._active
+                            a(href="projects.html") Проекты
+                    else
+                        li
+                            a(href="projects.html") Проекты
+
+                    if seotitle == 'О нас'
+                        li._active
+                            a(href="about.html") О нас
+                    else
+                        li
+                            a(href="about.html") О нас
+
+                    if seotitle == 'Карьера'
+                        li._active
+                            a(href="career.html") Карьера
+                    else
+                        li
+                            a(href="career.html") Карьера
+                    
+                    if seotitle == 'Блог'
+                        li._active
+                            a(href="blog.html") Блог
+                    else
+                        li
+                            a(href="blog.html") Блог
+                    
+                    if seotitle == 'Контакты'
+                        li._active
+                            a(href="contacts.html") Контакты
+                    else
+                        li
+                            a(href="contacts.html") Контакты
+
+            .header__search-wrap
+                button.header__search-btn.btn-reset(type="button" data-search-form-open)
+                    +sprite('search-form__icon', 22, 22, 'search')
+
+            form.search-form(action="#" method="post" data-search-form)
+                +sprite('search-form__icon', 22, 22, 'search')
+                input.search-form__input(type="text" name="search" minlength="3" placeholder="Поиск по сайту" required)
+                button.search-form__close.btn-reset(type="button" data-search-form-close)
+                    +sprite('', 24, 24, 'modal-close')
+                
+
+        a.header__link(href="tel:88002503147")
+            svg(width="24" height="24")
+                use(xlink:href="@img/icons/icons.svg#phone")
+            span 8 (800) 250-31-47
+
+        a.header__link(href="mailto:sales@gst-it.ru")
+            svg(width="24" height="24")
+                use(xlink:href="@img/icons/icons.svg#phone")
+            span sales@gst-it.ru
+
+        button.header__btn.btn._blue.btn-reset(type="button" data-fancybox data-src="#modal-order") Оставить заявку
+
+        button.header__burger.btn-reset(type="button" data-fancybox data-src="#mobile-nav")
+            span
+            span
+            span
+
+    .header__modal(id="mobile-nav" data-lenis-prevent)
+        button.modal__close.btn-reset(type="button" data-fancybox-close)
+            svg(width="30" height="30")
+                use(xlink:href="@img/icons/icons.svg#modal-close")
+
+        .header__modal-content
+            nav.header__nav
+                form.search-form._mobile(action="#" method="post")
+                    +sprite('search-form__icon', 22, 22, 'search')
+                    input.search-form__input(type="text" name="search" minlength="3" placeholder="Поиск по сайту" required)
+
+                ul.header__list.list-reset
+                    if seotitle == 'Продукты'
+                        li._active
+                            a(href="products.html") Продукты
+                    else
+                        li
+                            a(href="products.html") Продукты
+
+                    if seotitle == 'Услуги'
+                        li._active
+                            a(href="services.html") Услуги
+                    else
+                        li
+                            a(href="services.html") Услуги
+
+                    if seotitle == 'Проекты'
+                        li._active
+                            a(href="projects.html") Проекты
+                    else
+                        li
+                            a(href="projects.html") Проекты
+
+                    if seotitle == 'О нас'
+                        li._active
+                            a(href="about.html") О нас
+                    else
+                        li
+                            a(href="about.html") О нас
+
+                    if seotitle == 'Карьера'
+                        li._active
+                            a(href="career.html") Карьера
+                    else
+                        li
+                            a(href="career.html") Карьера
+                    
+                    if seotitle == 'Блог'
+                        li._active
+                            a(href="blog.html") Блог
+                    else
+                        li
+                            a(href="blog.html") Блог
+                    
+                    if seotitle == 'Контакты'
+                        li._active
+                            a(href="contacts.html") Контакты
+                    else
+                        li
+                            a(href="contacts.html") Контакты
+
+            .header__modal-footer
+                a.header__link(href="tel:88002503147")
+                    svg(width="24" height="24")
+                        use(xlink:href="@img/icons/icons.svg#phone")
+                    span 8 (800) 250-31-47
+
+                a.header__link(href="mailto:sales@gst-it.ru")
+                    svg(width="24" height="24")
+                        use(xlink:href="@img/icons/icons.svg#phone")
+                    span sales@gst-it.ru
+
+                button.header__btn.btn._blue.btn-reset(type="button" data-fancybox data-src="#modal-order") Оставить заявку
+
+                    

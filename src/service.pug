@@ -1,0 +1,125 @@
+extends base
+
+block meta
+    - var seotitle = 'Аренда вычислительного оборудования'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Интро
+    section.project-page-intro
+        +sprite('project-page-intro__icon', 400, 400, 'project-page-intro')
+        .container.project-page-intro__container
+            .project-page-intro__content
+                .breadcrumbs(data-aos="fade-up")
+                    ul.breadcrumbs__list.list-reset
+                        li 
+                            a(href="home.html") Главная
+                        li 
+                            a(href="services.html") Услуги
+                        li Аренда вычислительного оборудования
+
+                .project-page-intro__text._sale(data-aos="fade-right")
+                    .sale__icon Спецпредложение
+                    h1.project-page-intro__title Аренда вычислительного оборудования
+                    .project-page-intro__subtitle.text 
+                        p Предоставляем вычислительные мощности на площадке заказчика.
+                        p Формируем любые необходимые ресурсы для ваших проектов учитывающие требования ПО и ограничения в существующей инфраструктуре.
+                    button.btn.btn-reset._blue(type="button" data-fancybox data-src="#modal-consultation") Получить консультацию
+
+            +picture('project-page-intro__picture picture _cover radius-left-30', 'tmp/service/service-intro', 'jpg', 790, 840, 'Аренда вычислительного оборудования', 'fade-left')
+
+    .section._pb0
+        .container
+            .career-about__big
+                .career-about__big-numbers._left 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                .career-about__big-numbers._right 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                .career-about__big-text.shadow.radius-10(data-aos="zoom-in") Мы обеспечим <span>оптимальные характеристики</span> для комфортной работы вашего коллектива.
+
+    //Актуально
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-right") Актуально, если:
+
+            .swiper._full-width-tablet._shadow-full(data-swiper-actual)
+                .swiper-wrapper.actual
+                    .swiper-slide._equal-height
+                        .actual__item.shadow.radius-30(data-aos="fade-up")
+                            span 1
+                            | Мощности нужны немедленно и нет возможности вкладывать капитальные средства.
+                    .swiper-slide._equal-height
+                        .actual__item.shadow.radius-30(data-aos="fade-up" data-aos-delay="200")
+                            span 2 
+                            | Не сформировано окончательное понимание необходимой инфраструктуры и необходимы натурные испытания.
+                    .swiper-slide._equal-height
+                        .actual__item.shadow.radius-30(data-aos="fade-up" data-aos-delay="200")
+                            span 3
+                            | Ресурсы нужны временно для конвертации или переноса данных, информационных систем, переезда на другую технологическую площадку.
+
+    //История
+    section.section._pb0
+        .container.history
+            h2.section__title.history__title(data-aos="fade-right") Основные цели и задачи:
+
+            .history__content._icon
+                mixin history-item(title, text)
+                    article.history-item._icon(data-aos="history-item" data-aos-offset="200")
+                        +sprite('history-item__icon', 70, 70, 'service-target')
+                        .history-item__content.shadow.radius-30
+                            h3.history-item__title=title
+
+                +history-item('Построение надёжных вычислительных кластеров.')
+
+                +history-item('Строительство мощных сетей передачи данных.')
+
+                +history-item('Организация больших или очень больших хранилищ данных.')
+
+                +history-item('Понимание ограничений физической инфраструктуры.')
+
+                +history-item('Умеем разбираться в сложных случаях.')
+    
+    //Компоненты
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-right") Компоненты:
+
+            mixin value(title, icon, aos)
+                article.value.shadow.radius-30(data-value data-aos="fade-up" data-aos-delay=aos)
+                    .value__text.text
+                        p Используем оборудование мировых лидеров (DELL, IBM, HPE, Cisco, Broadcom) для создания высокоэффективных современных решений.
+
+                    .value__content
+                        h3.value__title=title
+                        .value__icon
+                            +sprite('', 120, 120, icon)
+
+            .swiper._shadow-vertical._full-width(data-swiper-home-about)
+                .swiper-wrapper.home-about__items._about
+                    .swiper-slide._equal-height
+                        +value('Высококачественное оборудование', 'equipment-1', 0)
+                    .swiper-slide._equal-height
+                        +value('Производительные и ёмкие СХД', 'equipment-2', 200)
+                    .swiper-slide._equal-height
+                        +value('Быстрые и надёжные SAN сети', 'equipment-3', 400)
+                    .swiper-slide._equal-height
+                        +value('Сети уровня ядра ЦОД', 'equipment-4', 600)
+
+block modals
+    .modal(id="modal-consultation" data-lenis-prevent)
+        .modal__content.radius-20
+            button.modal__close.btn-reset(type="button" data-fancybox-close)
+                +sprite('', 30, 30, 'modal-close')
+
+            h3.modal__title Получить консультацию
+
+            form.form.modal__form(action="#" method="post" data-policy-form)
+                input.form__input.radius-10(type="text" name="name" placeholder="Имя*")
+                input.form__input.radius-10(type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel)
+                textarea.form__textarea.radius-10(name="message" placeholder="Комментарий")
+                button.form__submit.btn.btn-reset._blue(type="submit" data-policy-submit data-open-thankyou) Оставить заявку
+                .form__checkbox
+                    input.form__checkbox-input(type="checkbox" name="privacy_policy" id="policy-service-modal" data-policy)
+                    label.form__checkbox-label(for="policy-service-modal") 
+                        span.form__checkbox-label-check
+                        span Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет
+                .form__required <span>*</span>Обязательно для заполнения

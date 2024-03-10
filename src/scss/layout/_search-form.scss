@@ -1,0 +1,69 @@
+.search-form {
+    position: absolute;
+    left: 0;
+    background: $color_bg;
+    border-radius: clamp-calc(50px, 100px);
+    display: flex;
+    align-items: center;
+    height: clamp-calc(40px, 55px);
+    border: 1px solid $color_primary;
+    padding: 0 clamp-calc(16px, 20px) 0 clamp-calc(20px, 25px);
+    gap: clamp-calc(20px, 25px);
+    color: $color_primary;
+    opacity: 0;
+    z-index: -1;
+    transition: .5s ease-in-out;
+    width: 0;
+
+    &._active,
+    &._mobile {
+        opacity: 1;
+        z-index: 2;
+        width: 100%;
+    }
+
+    &._mobile {
+        position: relative;
+        margin: 30px 0;
+    }
+
+    &__icon {
+        min-width: clamp-calc(18px, 22px);
+        max-width: clamp-calc(18px, 22px);
+        height: auto;
+    }
+
+    &__close {
+        color: currentColor;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            color: $color_gold;
+        }
+
+        & svg {
+            min-width: clamp-calc(20px, 24px);
+            max-width: clamp-calc(20px, 24px);
+            height: auto;
+        }
+    }
+
+    &__input {
+        height: 100%;
+        border: 0;
+        appearance: 0;
+        width: 100%;
+        background: none;
+        outline: none;
+        font-weight: 500;
+        font-size: clamp-calc(16px, 20px);
+        color: $color_primary;
+
+        &::placeholder {
+            color: #7d73ab;
+        }
+    }
+}

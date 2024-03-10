@@ -1,0 +1,134 @@
+extends base
+
+block meta
+    - var seotitle = 'Контакты'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Хлебные крошки
+    .breadcrumbs(data-aos="fade-up")
+        .container
+            ul.breadcrumbs__list.list-reset
+                li 
+                    a(href="home.html") Главная
+                li Контакты
+        
+
+    .container
+        h1.h1(data-aos="fade-up") Контакты
+
+        .tabs-container
+            swiper.swiper.tabs._full-width-tablet(data-swiper-tabs)
+                .swiper-wrapper
+                    .swiper-slide.tabs__slide
+                        button.tabs__item.tab.btn.btn-reset._bordered.asd.active(type="button" data-aos="fade-up" data-aos-delay="0") Москва
+                    .swiper-slide.tabs__slide
+                        button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="200") Санкт-Петербург
+                    .swiper-slide.tabs__slide
+                        button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="400") Самара
+                    .swiper-slide.tabs__slide
+                        button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="600") Саранск
+
+            .tab-panes(data-aos="fade-up")
+                .tab-pane.active
+                    address.contact
+                        .contact__content.radius-30.shadow
+                            .contact__item
+                                p.contact__title Телефон
+                                a.contact__text.contact__link(href="tel:88002503147") 8 (800) 250-31-47
+
+                            .contact__item
+                                p.contact__title Почта
+                                a.contact__text.contact__link(href="mailto:sales@gst-it.ru") sales@gst-it.ru
+
+                            .contact__item._full
+                                p.contact__title Адрес
+                                p.contact__text Москва, БЦ «Парк Победы», ул. Василисы Кожиной, д.1, секция 3, этаж 8, офис 803.1
+
+                        .contact__map.radius-30.shadow
+                            script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaac4297c87a66ae453adb421ff247f7445009c65dc94789b56ca9f418d44db7d&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
+
+                .tab-pane
+                    address.contact
+                        .contact__content.radius-30.shadow
+                            .contact__item
+                                p.contact__title Телефон
+                                a.contact__text.contact__link(href="tel:88002503147") 8 (800) 250-31-47
+
+                            .contact__item
+                                p.contact__title Почта
+                                a.contact__text.contact__link(href="mailto:sales@gst-it.ru") sales@gst-it.ru
+
+                            .contact__item._full
+                                p.contact__title Адрес
+                                p.contact__text Санкт-Петербург
+
+                        .contact__map.radius-30.shadow
+                            script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaac4297c87a66ae453adb421ff247f7445009c65dc94789b56ca9f418d44db7d&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
+
+                .tab-pane 
+                    address.contact
+                        .contact__content.radius-30.shadow
+                            .contact__item
+                                p.contact__title Телефон
+                                a.contact__text.contact__link(href="tel:88002503147") 8 (800) 250-31-47
+
+                            .contact__item
+                                p.contact__title Почта
+                                a.contact__text.contact__link(href="mailto:sales@gst-it.ru") sales@gst-it.ru
+
+                            .contact__item._full
+                                p.contact__title Адрес
+                                p.contact__text Самара
+
+                        .contact__map.radius-30.shadow
+                            script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaac4297c87a66ae453adb421ff247f7445009c65dc94789b56ca9f418d44db7d&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
+
+                .tab-pane
+                    address.contact
+                        .contact__content.radius-30.shadow
+                            .contact__item
+                                p.contact__title Телефон
+                                a.contact__text.contact__link(href="tel:88002503147") 8 (800) 250-31-47
+
+                            .contact__item
+                                p.contact__title Почта
+                                a.contact__text.contact__link(href="mailto:sales@gst-it.ru") sales@gst-it.ru
+
+                            .contact__item._full
+                                p.contact__title Адрес
+                                p.contact__text Саранск
+
+                        .contact__map.radius-30.shadow
+                            script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aaac4297c87a66ae453adb421ff247f7445009c65dc94789b56ca9f418d44db7d&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false")
+
+block footer
+    footer.footer(data-aos="fade-up")
+        section.footer-form._contacts.radius-60
+            .footer-form__numbers 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1 0 1 0 0 1 0 1
+            .container.footer-form__container
+                .footer-form__content.radius-30
+                    h3.footer-form__title Отправьте заявку для получения консультации
+                    form.footer-form__form.form(action="#" method="post" data-policy-form)
+                        .footer-form__cols
+                            input.form__input.radius-10(type="text" name="name" placeholder="Имя*")
+                            input.form__input.radius-10(type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel)
+                            input.form__input.radius-10(type="email" name="email" placeholder="Почта*")
+                            input.form__input.radius-10(type="text" name="company" placeholder="Компания")
+                            input.form__input.radius-10(type="text" name="position" placeholder="Должность")
+
+                        textarea.form__textarea.radius-10(name="message" placeholder="Комментарий")
+
+                        .footer-form__submit-wrap
+                            button.form__submit.btn.btn-reset._gold(type="submit" data-policy-submit) Оставить заявку
+                            .footer-form__required.form__required <span>*</span>Обязательно для заполнения
+
+                        .form__checkbox
+                            input.form__checkbox-input(type="checkbox" name="privacy_policy" id="footer-form-privacy-policy" data-policy)
+                            label.form__checkbox-label(for="footer-form-privacy-policy") 
+                                span.form__checkbox-label-check
+                                span Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет
+
+
+            

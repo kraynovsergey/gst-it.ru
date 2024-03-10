@@ -1,0 +1,242 @@
+extends base
+
+block meta
+    - var seotitle = 'Карьера'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Интро
+    section.career-intro.radius-bottom-30
+        .container.career-intro__container
+            .career-intro__content
+                //Хлебные крошки
+                .breadcrumbs(data-aos="fade-up")
+                    ul.breadcrumbs__list.list-reset
+                        li 
+                            a(href="home.html") Главная
+                        li Карьера
+
+                .career-intro__text
+                    h1.career-intro__title(data-aos="fade-right") Карьера в компании GST
+                    p.career-intro__subtitle(data-aos="fade-right") Присоединяйся к команде сильных — стань частью GST
+
+            .career-intro__gallery(data-aos="fade-left")
+                +picture('career-intro__picture _small picture radius-30 _cover', 'tmp/career/career-intro-small', 'jpg', 260, 300, 'Карьера в компании GST')
+                +picture('career-intro__picture picture radius-30 _cover', 'tmp/career/career-intro', 'jpg', 449, 300, 'Карьера в компании GST')
+                +picture('career-intro__picture picture radius-30 _cover', 'tmp/career/career-intro', 'jpg', 449, 300, 'Карьера в компании GST')
+                +picture('career-intro__picture _small picture radius-30 _cover', 'tmp/career/career-intro-small', 'jpg', 260, 300, 'Карьера в компании GST')
+                +picture('career-intro__picture _small picture radius-30 _cover', 'tmp/career/career-intro-small', 'jpg', 260, 300, 'Карьера в компании GST')
+                +picture('career-intro__picture picture radius-30 _cover', 'tmp/career/career-intro', 'jpg', 449, 300, 'Карьера в компании GST')
+                +picture('career-intro__picture picture radius-30 _cover', 'tmp/career/career-intro', 'jpg', 449, 300, 'Карьера в компании GST')
+                +picture('career-intro__picture _small picture radius-30 _cover', 'tmp/career/career-intro-small', 'jpg', 260, 300, 'Карьера в компании GST')
+
+    //О нас
+    section.section._pb0
+        .container.career-about
+            .career-about__content.radius-30.shadow(data-aos="fade-right")
+                h2.career-about__title О работе у нас
+                h3.career-about__subtitle Компания GST — это место профессионалов, где существует культура доверия и открытости. 
+                .career-about__text.text
+                    p Именно поэтому мы всегда в поисках профессионалов, горящих своим делом и нацеленных на результат: от выпускников вузов до ведущих специалистов и руководителей отделов. 
+                    p Мы не просто предоставляем возможность, нам важно, чтобы каждый сотрудник мог предложить идею и стремился реализовать её! Благодаря этому мы не боимся изменений, а с радостью видим в сложных задачах - новые возможности. 
+                    p Присоединяйся к команде сильных - стань частью GST!
+
+            +picture('career-about__picture radius-30 picture _cover', 'tmp/career/career-about', 'jpg', 710, 553, 'О работе у нас', 'fade-left')
+
+    .section._pb0
+        .container
+            .career-about__big
+                .career-about__big-numbers._left 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                .career-about__big-numbers._right 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                .career-about__big-text.shadow.radius-10(data-aos="zoom-in") Нам важно, чтобы <span>каждый сотрудник</span> мог предложить идею и <span>реализовать её</span>.
+
+    //Наши ценности
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-right") Наши ценности
+
+            mixin value(title, icon, aos)
+                article.value.shadow.radius-30(data-value data-aos="fade-up" data-aos-delay=aos)
+                    .value__text.text
+                        p Мы ценим принцип современности: Work – Life Balance!
+                        p Время - наш ценный актив, он намного важнее денег, поскольку деньги можно заработать, но потраченное время нельзя восстановить. И мы всегда учимся быть гибким настолько, чтобы быстро и качественно выполнять рабочие задачи, но при этом иметь время и силы на внерабочую жизнь.
+
+                    .value__content
+                        h3.value__title=title
+                        .value__icon
+                            +sprite('', 120, 120, icon)
+
+            .swiper._shadow-vertical._full-width(data-swiper-home-about)
+                .swiper-wrapper.home-about__items._about
+                    .swiper-slide._equal-height
+                        +value('Время', 'values-1', 0)
+                    .swiper-slide._equal-height
+                        +value('Непрерывное развитие', 'values-2', 200)
+                    .swiper-slide._equal-height
+                        +value('Команда', 'values-3', 400)
+                    .swiper-slide._equal-height
+                        +value('Клиентоориенти-рованность', 'values-4', 600)
+
+    //Забота
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-right") Мы заботимся о своих сотрудниках и предлагаем лучшие условия
+
+            .care
+                .care__items
+                    .swiper._full-width-tablet._shadow-full(data-swiper-care)
+                        mixin care-item(icon, title, list1, list2, list3)
+                            article.care__item.shadow.radius-30
+                                +sprite('care__icon', 50, 50, icon)
+                                h3.care__title=title
+                                ul.care__list.list-reset
+                                    li=list1
+                                    if list2
+                                        li=list2
+                                    if list3
+                                        li=list3
+
+                        .swiper-wrapper
+                            .swiper-slide._equal-height(data-aos="fade-up")
+                                +care-item('care-1', 'Доход', 'Достойный уровень оплаты труда, а также премии за реализованные идеи.')
+                            .swiper-slide._equal-height(data-aos="fade-up")
+                                +care-item('care-2', 'Развитие', 'Система наставничества и обмена знаниями.', 'Возможность карьерного роста как внутри отделов, так и в смежных подразделениях.')
+                            .swiper-slide._equal-height(data-aos="fade-up")
+                                +care-item('care-3', 'Комфорт', 'Удобные и эргономичные рабочие места.', 'Просторная кухня и никаких крошек в клавиатуре.', 'Лаунж-зоны, чтобы перевести дыхание.')
+                            .swiper-slide._equal-height(data-aos="fade-up")
+                                +care-item('care-4', 'Семья', 'Новогодние подарки для детей.', 'Совместный отдых на корпоративных мероприятиях.', 'Дополнительный выходной на знаковое событие (свадьба, рождение детей).')
+                            .swiper-slide._equal-height(data-aos="fade-up")
+                                +care-item('care-5', 'Время', 'Офисы, расположенные в 10 минутах от метро.', 'Возможность частично удаленной работы.')
+                            .swiper-slide._equal-height(data-aos="fade-up")
+                                +care-item('care-6', 'Здоровье', '100% оплачиваемый больничный.', 'Сезонная вакцинация для желающих.')
+
+                section.care__gallery
+                    .swiper__header(data-aos="fade-left")
+                        h2.care__gallery-title Работать в команде — это круто!
+                        
+                        .swiper__navs
+                            button.swiper__nav._prev.radius-10.shadow.btn-reset(type="button" data-swiper-care-gallery-prev)
+                                +sprite('', 31, 16, 'arrow-right')
+                            button.swiper__nav._next.radius-10.shadow.btn-reset(type="button" data-swiper-care-gallery-next)
+                                +sprite('', 31, 16, 'arrow-right')
+
+                    .care__gallery-wrapper(data-aos="fade-left" data-aos-delay="200")
+                        +picture('care-gallery-bg picture', 'tmp/career/career-care', 'png', 810, 792)
+                        .swiper(data-swiper-care-gallery)
+                            .swiper-wrapper
+                                .swiper-slide._equal-height
+                                    figure.care__gallery-item
+                                        +picture('picture', 'tmp/career/career-care-img', 'jpg', 650, 541, 'Здесь мы отдыхаем')
+                                        figcaption Здесь мы <span>отдыхаем</span>
+                                .swiper-slide._equal-height
+                                    figure.care__gallery-item
+                                        +picture('picture', 'tmp/career/career-care-img', 'jpg', 650, 541, 'Здесь мы отдыхаем')
+                                        figcaption Здесь мы <span>отдыхаем2</span>
+                                .swiper-slide._equal-height
+                                    figure.care__gallery-item
+                                        +picture('picture', 'tmp/career/career-care-img', 'jpg', 650, 541, 'Здесь мы отдыхаем')
+                                        figcaption Здесь мы <span>отдыхаем3</span>
+
+                            .care__gallery-pagination(data-swiper-care-gallery-pagination)
+
+    .section._pb0
+        .container
+            .career-about__big
+                .career-about__big-numbers._left 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                .career-about__big-numbers._right 1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1<br>1 0 1 0 0 0 1 1 0 1 0 0 0 1<br>0 1 0 0 1 0 1 0 1 0 0 1 0 1
+                .career-about__big-text.shadow.radius-10(data-aos="zoom-in") Нам нужны <span>сотрудники:</span><small>Мы эффективно работаем в Москве и в регионах в разных форматах: <span>в офисе и удалено</span></small>
+
+    //Типы
+    .section._pb0
+        .container
+            mixin career-type(title, aos)
+                figure.career-types.radius-30(data-aos="fade-up" data-aos-delay=aos)
+                    +picture('picture', 'tmp/career/career-type', 'jpg', 410, 285)
+                    figcaption=title
+
+            .swiper._shadow-vertical._full-width(data-swiper-home-about)
+                .swiper-wrapper.home-about__items._about
+                    .swiper-slide._equal-height
+                        +career-type('Работа в продажах', 0)
+                    .swiper-slide._equal-height
+                        +career-type('Работа в офисе', 200)
+                    .swiper-slide._equal-height
+                        +career-type('Работа удаленно', 400)
+                    .swiper-slide._equal-height
+                        +career-type('Работа студентам или молодым специалистам', 600)
+
+    //Вакансии
+    section.section._pb0
+        .container
+            h2.section__title(data-aos="fade-right") Вакансии
+
+            .tabs-container
+                swiper.swiper.tabs._full-width-tablet(data-swiper-tabs)
+                    .swiper-wrapper
+                        .swiper-slide.tabs__slide
+                            button.tabs__item.tab.btn.btn-reset._bordered.asd.active(type="button" data-aos="fade-up" data-aos-delay="0") Все города
+                        .swiper-slide.tabs__slide
+                            button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="200") Москва
+                        .swiper-slide.tabs__slide
+                            button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="400") Санкт-Петебург
+                        .swiper-slide.tabs__slide
+                            button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="600") Самара
+                        .swiper-slide.tabs__slide
+                            button.tabs__item.tab.btn.btn-reset._bordered(type="button" data-aos="fade-up" data-aos-delay="800") Саранск
+
+                .tab-panes(data-aos="fade-up")
+                    .tab-pane.active
+                        .vacancies(data-vacancies)
+                            .vacancies__items
+                                +vacancy('Самара', 'Ведущий системный администратор')
+                                +vacancy('Самара', 'Ведущий системный администратор')
+                                +vacancy('Самара', 'Ведущий системный администратор')
+                                +vacancy('Самара', 'Ведущий системный администратор')
+
+                            .vacancies__more(data-aos="fade-down")
+                                button.btn.btn-reset._blue(type="button" data-vacancies-more) Посмотреть все вакансии
+                    .tab-pane
+                        .vacancies(data-vacancies)
+                            .vacancies__items
+                                +vacancy('Москва', 'Ведущий системный администратор')
+
+                            .vacancies__more(data-aos="fade-down")
+                                button.btn.btn-reset._blue(type="button" data-vacancies-more) Посмотреть все вакансии
+
+                    .tab-pane
+                        .vacancies(data-vacancies)
+                            .vacancies__items
+                                +vacancy('Санкт-Петербург', 'Ведущий системный администратор')
+
+                            .vacancies__more(data-aos="fade-down")
+                                button.btn.btn-reset._blue(type="button" data-vacancies-more) Посмотреть все вакансии
+
+                    .tab-pane
+                        .vacancies(data-vacancies)
+                            .vacancies__items
+                                +vacancy('Самара', 'Ведущий системный администратор')
+
+                            .vacancies__more(data-aos="fade-down")
+                                button.btn.btn-reset._blue(type="button" data-vacancies-more) Посмотреть все вакансии
+
+                    .tab-pane
+                        .vacancies(data-vacancies)
+                            .vacancies__items
+                                +vacancy('Саранск', 'Ведущий системный администратор')
+
+                            .vacancies__more(data-aos="fade-down")
+                                button.btn.btn-reset._blue(type="button" data-vacancies-more) Посмотреть все вакансии
+                        
+            
+
+
+
+
+                    
+
+
+
+            
+                
+

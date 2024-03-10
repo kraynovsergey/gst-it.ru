@@ -1,0 +1,112 @@
+.footer {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        background: #170a4a;
+        margin-top: calc(clamp-calc(30px, 60px) * -1);
+        color: $color_white;
+    }
+
+    &__main {
+        padding: clamp-calc(60px, 140px) 0 clamp-calc(30px, 40px);
+    }
+
+    &__main-container {
+        display: flex;
+        flex-direction: column;
+        gap: clamp-calc(25px, 70px);
+    }
+
+    &__title {
+        margin: 0;
+        padding: 0;
+        font-size: clamp-calc(22px, 45px);
+        font-weight: 500;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+        @include tablet-small {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__contacts {
+        display: flex;
+        align-items: center;
+        gap: clamp-calc(30px, 120px);
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    &__contact {
+        color: #cac1de;
+        font-size: clamp-calc(18px, 45px);
+        text-decoration: none;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            color: $color_white;
+        }
+    }
+
+    &__accreditation {
+        display: flex;
+        align-items: center;
+        gap: clamp-calc(15px, 30px);
+        color: #cac1de;
+        font-size: clamp-calc(16px, 22px);
+
+        & svg {
+            min-width: clamp-calc(100px, 211px);
+            max-width: clamp-calc(100px, 211px);
+            height: auto;
+        }
+    }
+
+    &__cities {
+        width: 100%;
+
+        @include tablet {
+            width: calc(100% + clamp-calc(30px, 160px));
+        }
+    }
+
+    &__bottom {
+        border-top: 1px solid $color_primary;
+        padding: clamp-calc(30px, 40px);
+        font-size: clamp-calc(14px, 20px);
+        color: #cac1de;
+    }
+
+    &__bottom-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: clamp-calc(30px, 40px);
+
+        @include tablet {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+
+    &__bottom-link {
+        color: #7d73ab;
+        text-decoration: none;
+
+        &:hover {
+            @include tablet-from {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.modal(id="modal-order" data-lenis-prevent)
+    .modal__content.radius-20
+        button.modal__close.btn-reset(type="button" data-fancybox-close)
+            +sprite('', 30, 30, 'modal-close')
+
+        h3.modal__title Оставить заявку
+
+        form.form.modal__form(action="#" method="post" data-policy-form)
+            input.form__input.radius-10(type="text" name="name" placeholder="Имя*")
+            input.form__input.radius-10(type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel)
+            textarea.form__textarea.radius-10(name="message" placeholder="Комментарий")
+            button.form__submit.btn.btn-reset._blue(type="submit" data-policy-submit data-open-thankyou) Оставить заявку
+            .form__checkbox
+                input.form__checkbox-input(type="checkbox" name="privacy_policy" id="footer-form-modal" data-policy)
+                label.form__checkbox-label(for="footer-form-modal") 
+                    span.form__checkbox-label-check
+                    span Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет
+            .form__required <span>*</span>Обязательно для заполнения
+
+.modal(id="modal-thankyou" data-lenis-prevent)
+    .modal__content.radius-20
+        button.modal__close.btn-reset(type="button" data-fancybox-close)
+            +sprite('', 30, 30, 'modal-close')
+
+        section.modal__thankyou
+            h3.modal__title Заявка принята
+            p.modal__text Вскоре мы с вами свяжемся!
+            button.modal__btn.btn._blue.btn-reset(type="button" data-fancybox-close) Хорошо, спасибо
+            

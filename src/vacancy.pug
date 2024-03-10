@@ -1,0 +1,117 @@
+extends base
+
+block meta
+    - var seotitle = 'Ведущий системный администратор'
+    - var seodescription = ''
+    - var seokeywords = ''
+
+block main
+    //Хлебные крошки
+    .breadcrumbs(data-aos="fade-up")
+        .container
+            ul.breadcrumbs__list.list-reset
+                li 
+                    a(href="home.html") Главная
+                li 
+                    a(href="career.html") Карьера
+                li Ведущий системный администратор
+
+    .container
+        h1.h1(data-aos="fade-right") Ведущий системный администратор
+
+        .vacancy-page
+            .vacancy-page__content
+                .vacancy-page__block.shadow.radius-30.text(data-aos="fade-up")
+                    p.vacancy-page__place
+                        +sprite('', 24, 24, 'place')
+                        | Российская, Самара, Ново-Садовая улица, 139
+                    h2 Требуемый опыт работы: 1–3 года
+                    p Полная занятость, полный день
+
+                .vacancy-page__block.shadow.radius-30.text(data-aos="fade-up")
+                    p Более 17 лет успешно работаем на рынке ИТ, понимаем их ценность для бизнеса и уверенно идём вперед!
+                    ul
+                        li С Бухгалтерия, ЗУП, УТ
+                        li Корпоративный портал Битрикс24
+                        li Почтовый сервис Zimbra
+                        li IP-телефония Asterisk
+                        li Файловое хранилище
+                        li Видеонаблюдение, СКУД
+                    p Так же у Вас будет возможность присоединиться к реализации внутренних проектов, таких как:
+                    ul 
+                        li Повышение отказоустойчивости ИТ-инфраструктуры
+                        li Обеспечение информационной безопасности
+                    p Мы делаем упор на развитие ИТ-систем в соответствии с требованиями компании, стараемся идти в ногу со временем.
+                    p На внутренней работа ИТ не заканчивается, дальше Вы принимаете участие в разнообразных внешних проектах (работа с заказчиками) в составе проектной команды.
+
+                .vacancy-page__block.shadow.radius-30.text(data-aos="fade-up")
+                    h3 Требования скромные, главное - умение:
+                    ul 
+                        li Знание теории построения сетей и опыт настройки сетевого оборудования
+                        li Опыт администрирования серверов и компьютеров на Windows и Linux
+                        li Знание и опыт работы с Proxmox как преимущество
+                        li Умение принимать решения и брать на себя ответственность
+                    h3 Условия (стандартные для нас, за других не скажем):
+                    ul
+                        li Работа в новом современном офисе с панорамным видом на Волгу
+                        li Возможность профессионально расти, решая разные задачи и проходя обучение за счет компании
+                        li Лояльное руководство, считающееся с вашим профессиональным мнением
+                        li Оформление по ТК с 1-го дня работы (оплачиваемый отпуск и больничный лист), график 5/2 с 9:00 до 18:00
+                        li Официальная, полностью “белая” зарплата, которая дополняется такой же “белой” премией за достижение результата
+                    p Ваша стартовая зарплата определяется на собеседовании, по итогам сравнения ваших навыков с нашими потребностями.
+                    h3 Присоединяйся к команде сильных!
+                    .vacancy-page__controls
+                        button.btn.btn-reset._blue(type="button" data-fancybox data-src="#modal-rezume") Отправить резюме
+                        button.btn.btn-reset._bordered(type="button" data-fancybox data-src="#modal-question") Задать вопрос
+
+            aside.vacancy-page__sidebar
+                h3.vacancy-page__sidebar-title Другие вакансии:
+                +vacancy('Самара', 'Ведущий системный администратор')
+                +vacancy('Самара', 'Ведущий системный администратор')
+                +vacancy('Самара', 'Ведущий системный администратор')
+
+block modals
+    .modal(id="modal-rezume" data-lenis-prevent)
+        .modal__content.radius-20
+            button.modal__close.btn-reset(type="button" data-fancybox-close)
+                +sprite('', 30, 30, 'modal-close')
+
+            h3.modal__title Отправить резюме
+
+            form.form.modal__form(action="#" method="post" data-policy-form enctype="multipart/dorm-data")
+                input.form__input.radius-10(type="text" name="name" placeholder="Имя*")
+                input.form__input.radius-10(type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel)
+                textarea.form__textarea.radius-10(name="message" placeholder="Комментарий")
+                .form__file
+                    .form__file-wrapper
+                        input(type="file" name="attachment" id="rezume-file" data-form-file)
+                        label.btn.btn-reset._bordered(for="rezume-file") Прикрепить резюме
+                        .form__filename(data-form-filename)
+
+                button.form__submit.btn.btn-reset._blue(type="submit" data-policy-submit data-open-thankyou) Оставить заявку
+
+                .form__checkbox
+                    input.form__checkbox-input(type="checkbox" name="privacy_policy" id="policy-rezume-modal" data-policy)
+                    label.form__checkbox-label(for="policy-rezume-modal") 
+                        span.form__checkbox-label-check
+                        span Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет
+                .form__required <span>*</span>Обязательно для заполнения
+
+    .modal(id="modal-question" data-lenis-prevent)
+        .modal__content.radius-20
+            button.modal__close.btn-reset(type="button" data-fancybox-close)
+                +sprite('', 30, 30, 'modal-close')
+
+            h3.modal__title Задать вопрос
+
+            form.form.modal__form(action="#" method="post" data-policy-form)
+                input.form__input.radius-10(type="text" name="name" placeholder="Имя*")
+                input.form__input.radius-10(type="tel" name="phone" placeholder="+7 (ХХХ) ХХХ-ХХ-ХХ*" data-tel)
+                textarea.form__textarea.radius-10(name="message" placeholder="Комментарий")
+                button.form__submit.btn.btn-reset._blue(type="submit" data-policy-submit data-open-thankyou) Оставить заявку
+                .form__checkbox
+                    input.form__checkbox-input(type="checkbox" name="privacy_policy" id="policy-question-modal" data-policy)
+                    label.form__checkbox-label(for="policy-question-modal") 
+                        span.form__checkbox-label-check
+                        span Я ознакомлен с <a href="privacy-policy.html" target="_blank">Политикой конфиденциальности</a>, согласен на <a href="privacy-policy.html" target="_blank">обработку персональных данных</a> и подтверждаю, что мне исполнилось 18 лет
+                .form__required <span>*</span>Обязательно для заполнения

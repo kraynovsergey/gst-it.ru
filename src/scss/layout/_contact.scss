@@ -1,0 +1,58 @@
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp-calc(20px, 40px);
+
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+
+    &__content {
+        padding: clamp-calc(30px, 60px) clamp-calc(20px, 70px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: clamp-calc(20px, 40px);
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: grid;
+        gap: clamp-calc(15px, 20px);
+
+        &._full {
+            @include mobile-from {
+                grid-column: span 2;
+            }
+        }
+    }
+
+    &__title {
+        margin: 0;
+        color: #7d73ab;
+    }
+
+    &__text {
+        margin: 0;
+    }
+
+    &__link {
+        color: $color_primary;
+        text-decoration: none;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            color: $color_gold;
+        }
+    }
+
+    &__map {
+        display: flex;
+
+        @include tablet {
+            height: 300px;
+        }
+    }
+}

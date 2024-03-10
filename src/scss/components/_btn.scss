@@ -1,0 +1,84 @@
+.btn-reset {
+    padding: 0;
+    margin: 0;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    appearance: none;
+    font-weight: normal;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn {
+    height: clamp-calc(40px, 53px);
+    border-radius: clamp-calc(20px, 30px);
+    font-size: clamp-calc(16px, 18px);
+    font-weight: 500;
+    padding: 0 clamp-calc(15px, 23px);
+    transition: .5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:disabled {
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
+    &._blue {
+        background: $color_primary;
+        color: $color_white;
+
+        &:hover {
+            &:not(:disabled) {
+                @include tablet-from {
+                    background: $color_gold;
+                }
+            }
+        }
+    }
+
+    &._white {
+        background: $color_white;
+        color: $color_primary;
+
+        &:hover {
+            &:not(:disabled) {
+                @include tablet-from {
+                    background: $color_gold;
+                }
+            }
+        }
+    }
+
+    &._gold {
+        background: $color_gold;
+        color: $color_primary;
+
+        &:hover {
+            &:not(:disabled) {
+                @include tablet-from {
+                    background: $color_primary;
+                    color: $color_white;
+                }
+            }
+        }
+    }
+
+    &._bordered {
+        border: 1px solid $color_primary;
+        color: $color_primary;
+
+        &:hover {
+            &:not(:disabled) {
+                @include tablet-from {
+                    background: $color_primary;
+                    color: $color_white;
+                }
+            }
+        }
+    }
+}
