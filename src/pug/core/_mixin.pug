@@ -22,8 +22,8 @@ mixin news(img, date, title, tag, aos)
             h3.news__title
                 a.news__link.link._full(href="news-page.html")=title
             ul.news__tags.list-reset
-                span #новости
-                span=tag
+                li #новости
+                li=tag
 
 mixin vacancy(city, title)
     article.vacancies__item.radius-30.shadow(data-aos="fade-up" data-vacancies-item)
@@ -44,4 +44,4 @@ mixin project(title, link, icon, delay)
         a.project__btn.btn-reset.radius-10.shadow.link._full(href=link) 
             +sprite('', 41, 16, 'arrow-right')
         if icon
-            img.project__icon(src="@img/tmp/projects/"+icon)
+            img.project__icon(src="@img/tmp/projects/"+icon width="200" height="200" alt=title)

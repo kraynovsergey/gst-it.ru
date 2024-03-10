@@ -122,7 +122,7 @@ block main
                                 +sprite('', 31, 16, 'arrow-right')
 
                     .care__gallery-wrapper(data-aos="fade-left" data-aos-delay="200")
-                        +picture('care-gallery-bg picture', 'tmp/career/career-care', 'png', 810, 792)
+                        +picture('care-gallery-bg picture', 'tmp/career/career-care', 'png', 810, 792, 'Фон')
                         .swiper(data-swiper-care-gallery)
                             .swiper-wrapper
                                 .swiper-slide._equal-height
@@ -172,7 +172,7 @@ block main
             h2.section__title(data-aos="fade-right") Вакансии
 
             .tabs-container
-                swiper.swiper.tabs._full-width-tablet(data-swiper-tabs)
+                .swiper.tabs._full-width-tablet(data-swiper-tabs)
                     .swiper-wrapper
                         .swiper-slide.tabs__slide
                             button.tabs__item.tab.btn.btn-reset._bordered.asd.active(type="button" data-aos="fade-up" data-aos-delay="0") Все города
