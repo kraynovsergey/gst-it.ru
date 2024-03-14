@@ -14,10 +14,6 @@
         font-size: clamp-calc(16px, 18px);
         color: $color_primary;
 
-        &::placeholder {
-            color: #7d73ab;
-        }
-
         &.is-invalid {
             color: $color_red;
             background: #fff0f0;

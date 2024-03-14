@@ -2,10 +2,24 @@
     display: grid;
     grid-template-columns: repeat(2, calc(50% - clamp-calc(10px, 20px)));
     gap: clamp-calc(20px, 40px);
-    align-items: center;
+    align-items: start;
 
     @include tablet {
         display: block;
+    }
+
+    & .swiper__header {
+        @include mobile {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+    }
+
+    & .swiper__navs {
+        @include tablet {
+            display: flex;
+        }
     }
 
     &__items {
@@ -59,6 +73,11 @@
     }
 
     &__gallery {
+        @include tablet-from {
+            position: sticky;
+            top: calc(clamp-calc(50px, 80px) + 15px);
+        }
+
         & .swiper__header {
             margin-bottom: 0;
         }

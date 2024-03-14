@@ -10,7 +10,7 @@
 
     &__numbers {
         font-weight: 300;
-        font-size: clamp-calc(14px, 20px);
+        font-size: clamp-calc(10px, 16px);
         background: linear-gradient(327deg, #34217e 0%, #4b33ab 0.01%, #291770 100%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -38,6 +38,6 @@
         margin: 0;
         color: #cac1de;
         font-weight: 500;
-        font-size: clamp-calc(16px, 24px);
+        font-size: clamp-calc(16px, 21px);
     }
 }

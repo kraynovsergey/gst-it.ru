@@ -43,10 +43,10 @@
             ]}
 
             <picture class="sale__picture picture _cover" data-aos="fade-left">
-                <source type="image/webp" data-srcset="{$intro_img_webp} 1x, {$intro_img_webp_2x} 2x">
+                <source type="image/webp" data-srcset="{$intro_img_webp_2x}">
                 <img class="lazy"
                     src="{$intro_img_lazy}"
-                    data-srcset="{$intro_img} 1x, {$intro_img_2x} 2x" 
+                    data-srcset="{$intro_img_2x}" 
                     alt="{$_modx->resource.pagetitle | escape}" width="860" height="540">
             </picture>
         </article>

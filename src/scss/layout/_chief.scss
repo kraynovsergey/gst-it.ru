@@ -3,7 +3,7 @@
     padding: clamp-calc(20px, 40px) clamp-calc(15px, 70px);
     display: grid;
     grid-template-columns: .15fr .85fr;
-    gap: clamp-calc(20px, 100px);
+    gap: clamp-calc(30px, 100px);
     align-items: center;
 
     @include tablet-small {
@@ -16,7 +16,7 @@
         overflow: hidden;
 
         @include tablet-small {
-            width: 240px;
+            width: 150px;
             max-width: 100%;
         }
     }

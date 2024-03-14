@@ -8,6 +8,7 @@
                 {foreach $partners as $row}
                     <div class="swiper-slide partner _equal-height">
                         <img src="assets/images/{$row.img}" width="{$row.width}" height="{$row.height}" alt="">
+                        <img class="_color" src="assets/images/{$row.img_color}" width="{$row.width}" height="{$row.height}" alt="">
                     </div>
                 {/foreach}
             </div>

@@ -3,4 +3,17 @@
     height: 100%;
     display: flex;
     align-items: center;
+    position: relative;
+
+    & img {
+        &._color {
+            position: absolute;
+            opacity: 0;
+            transition: .5s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
 }
