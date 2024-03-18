@@ -764,6 +764,7 @@ img.entered.loaded {
   font-weight: 400;
   font-size: clamp(16px, 15.5145631068px + 0.0012944984 * 100vw, 18px);
   color: #291770;
+  outline: none;
 }
 
 .form__input.is-invalid,

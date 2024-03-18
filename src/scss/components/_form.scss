@@ -13,6 +13,7 @@
         font-weight: 400;
         font-size: clamp-calc(16px, 18px);
         color: $color_primary;
+        outline: none;
 
         &.is-invalid {
             color: $color_red;
