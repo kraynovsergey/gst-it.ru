@@ -9,6 +9,15 @@
 <meta name="keywords" content="{'seoPro.keywords' | placeholder}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="icon" type="image/png" sizes="16x16" href="assets/theme/img/favicon/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/theme/img/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="150x150" href="assets/theme/img/favicon/mstile-150x150.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/theme/img/favicon/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/theme/img/favicon/android-chrome-512x512.png">
+<link rel="apple-touch-icon" href="assets/theme/img/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/x-icon" href="assets/theme/img/favicon/favicon.ico">
+
 <link
     href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,25..151,100..1000&amp;display=swap"
     rel="stylesheet">
