@@ -9800,7 +9800,7 @@ if (swiper_marquee.length > 0) {
             speed: 4000,
             breakpoints: {
                 0: {
-                    spaceBetween: 30
+                    spaceBetween: 0
                 },
                 768: {
                     spaceBetween: 40

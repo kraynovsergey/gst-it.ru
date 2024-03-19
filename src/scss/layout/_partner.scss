@@ -15,5 +15,11 @@
                 opacity: 1;
             }
         }
+
+        @include mobile {
+            //width: 70%;
+            //height: auto;
+            transform: scale(.8);
+        }
     }
 }

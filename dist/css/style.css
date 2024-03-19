@@ -782,6 +782,11 @@ img.entered.loaded {
   color: #e67531;
 }
 
+.form__input:focus,
+.form__textarea:focus {
+  outline: solid #291770;
+}
+
 .form__input {
   height: clamp(40px, 36.359223301px + 0.0097087379 * 100vw, 55px);
   padding: 0 clamp(15px, 12.572815534px + 0.0064724919 * 100vw, 25px);
@@ -1780,7 +1785,7 @@ h1,
   font-size: clamp(14px, 13.0291262136px + 0.0025889968 * 100vw, 18px);
   transform: rotate(-11deg);
   z-index: 2;
-  margin-bottom: clamp(10px, 7.572815534px + 0.0064724919 * 100vw, 20px);
+  margin-bottom: clamp(20px, 17.572815534px + 0.0064724919 * 100vw, 30px);
 }
 
 .sale__title {
@@ -2878,7 +2883,7 @@ h1,
 }
 
 .project-page-intro__text._sale .sale__icon {
-  margin-bottom: clamp(20px, 17.572815534px + 0.0064724919 * 100vw, 30px);
+  margin-bottom: clamp(30px, 27.572815534px + 0.0064724919 * 100vw, 40px);
 }
 
 .project-page-intro__title {
@@ -3232,6 +3237,10 @@ h1,
 
   .home-numbers__items {
     grid-template-columns: 1fr;
+  }
+
+  .partner img {
+    transform: scale(0.8);
   }
 
   .footer-form__submit-wrap {

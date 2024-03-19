@@ -23,6 +23,10 @@
                 color: $color_red;;
             }
         }
+
+        &:focus {
+            outline: solid #291770;
+        }
     }
 
     &__input {
