@@ -2,27 +2,27 @@
     <div class="container">
         <article class="chief radius-30 shadow" data-aos="fade-up">
             {set $chief_img_lazy = 'pThumb' | snippet : [
-                'input' => 1 | resource : 'chief_img',
+                'input' => $_modx->resource.chief_img,
                 'options' => 'w=240&h=240&zc=1&q=1&f=jpg'
             ]}
 
             {set $chief_img = 'pThumb' | snippet : [
-                'input' => 1 | resource : 'chief_img',
+                'input' => $_modx->resource.chief_img,
                 'options' => 'w=240&h=240&zc=1&q=90&f=jpg'
             ]}
 
             {set $chief_img_2x = 'pThumb' | snippet : [
-                'input' => 1 | resource : 'chief_img',
+                'input' => $_modx->resource.chief_img,
                 'options' => 'w=480&h=480&zc=1&q=90&f=jpg'
             ]}
 
             {set $chief_img_webp = 'pThumb' | snippet : [
-                'input' => 1 | resource : 'chief_img',
+                'input' => $_modx->resource.chief_img,
                 'options' => 'w=240&h=240&zc=1&q=90&f=webp'
             ]}
 
             {set $chief_img_webp_2x = 'pThumb' | snippet : [
-                'input' => 1 | resource : 'chief_img',
+                'input' => $_modx->resource.chief_img,
                 'options' => 'w=480&h=480&zc=1&q=90&f=webp'
             ]}
 
@@ -34,13 +34,13 @@
 
             <div class="chief__content">
                 <p class="chief__text">
-                    {1 | resource : 'chief_quote'}
+                    {$_modx->resource.chief_quote}
                     <svg class="chief__quote" width="81" height="70">
                         <use xlink:href="assets/theme/img/icons/icons.svg#quote"></use>
                     </svg>
                 </p>
-                <h3 class="chief__title">{1 | resource : 'chief_fullname'}</h3>
-                <p class="chief__subtitle">{1 | resource : 'chief_position'}</p>
+                <h3 class="chief__title">{$_modx->resource.chief_fullname}</h3>
+                <p class="chief__subtitle">{$_modx->resource.chief_position}</p>
             </div>
         </article>
     </div>
