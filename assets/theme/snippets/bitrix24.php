@@ -1,6 +1,6 @@
 <?php
-/*function CurlBitrix24($method, $arData=array()){
-	$queryUrl = "https://bitrix.marillion.ru/rest/58/ybs2lbmo1twbscxn/".$method;   
+function CurlBitrix24($method, $arData=array()){
+	$queryUrl = "https://portal.gst-it.ru/rest/1902/37fj2gffj9414ugo/".$method;   
 	$curl = curl_init();
 	curl_setopt_array($curl, array(
 		CURLOPT_URL => $queryUrl,
@@ -22,8 +22,26 @@
 }
 
 $arFields = array(
-	"TITLE" => htmlspecialchars($_POST['company'])
+	"TITLE" => 'Заявка с сайта '.htmlspecialchars($_POST['phone']),
+	'NAME' => $_POST['name'],
+	"PHONE" => array(array("VALUE"=>$_POST['phone'], "VALUE_TYPE"=>"WORK" ))
 );
+
+if (!empty($_POST['message'])) {
+	$arFields['COMMENTS'] = htmlspecialchars($_POST['message']);
+}
+
+if (!empty($_POST['email'])) {
+	$arFields['EMAIL'] = array(array("VALUE"=>htmlspecialchars($_POST['email']), "VALUE_TYPE"=>"WORK" ));
+}
+
+if (!empty($_POST['company'])) {
+	$arFields['COMPANY_TITLE'] = htmlspecialchars($_POST['company']);
+}
+
+if (!empty($_POST['position'])) {
+	$arFields['POST'] = htmlspecialchars($_POST['position']);
+}
 
 
 	//'NAME' => $_POST['name'],
@@ -34,7 +52,7 @@ $arFields = array(
 	//'UF_CRM_1668455894' => $_POST['message']
 
 
-if (!empty($_POST['subject'])) {
+/*if (!empty($_POST['subject'])) {
 	$arFields['UF_CRM_1669720914048'] = htmlspecialchars($_POST['subject']);
 }
 
@@ -42,16 +60,8 @@ if (!empty($_POST['name'])) {
 	$arFields['NAME'] = htmlspecialchars($_POST['name']);
 }
 
-if (!empty($_POST['company'])) {
-	$arFields['UF_CRM_1661713322'] = htmlspecialchars($_POST['company']);
-}
-
 if (!empty($_POST['phone'])) {
 	$arFields['PHONE'] = array(array("VALUE"=>htmlspecialchars($_POST['phone']), "VALUE_TYPE"=>"WORK" ));
-}
-
-if (!empty($_POST['email'])) {
-	$arFields['EMAIL'] = array(array("VALUE"=>htmlspecialchars($_POST['email']), "VALUE_TYPE"=>"WORK" ));
 }
 
 if (!empty($_POST['find'])) {
@@ -95,7 +105,7 @@ if(!empty($_FILES['attachment'])){
 	$file = $_FILES['attachment'];
 	$fileData = file_get_contents($file['tmp_name']);
 	$arFields['UF_CRM_1668455842'] = array('fileData'=>array(0=>$file['name'],1=>base64_encode($fileData)));
-}
+}*/
 
 $result = CurlBitrix24('crm.lead.add.json', array(
 	'fields' => $arFields, 
@@ -103,4 +113,4 @@ $result = CurlBitrix24('crm.lead.add.json', array(
 ));
 
 $leadId = (is_array($result) && !empty($result["result"])) ? $result["result"]: false;   
-echo json_encode($leadId);*/
+echo json_encode($leadId);
