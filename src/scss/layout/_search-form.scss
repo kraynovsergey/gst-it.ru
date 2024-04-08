@@ -12,7 +12,7 @@
     color: $color_primary;
     opacity: 0;
     z-index: -1;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
     width: 0;
 
     &._active,
@@ -38,7 +38,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
 
         &:hover {
             color: $color_gold;

@@ -40,7 +40,7 @@
         position: relative;
         font-size: clamp-calc(18px, 24px);
         color: $color_primary;
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
 
         &:hover {
             @include tablet-from {
@@ -74,7 +74,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: .5s ease-in-out;
+            transition: .3s ease-in-out;
 
             & svg {
                 width: 40%;

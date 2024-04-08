@@ -166,7 +166,8 @@ var aos = __webpack_require__(42);
 
 
 aos.init({
-    duration: 800
+    duration: 800,
+    once: true
 });
 
 window.addEventListener('scroll', () => {

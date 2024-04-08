@@ -7,7 +7,7 @@
     position: fixed;
     width: 100%;
     top: 0;
-    transition: top .5s ease-in-out;
+    transition: top .3s ease-in-out;
     z-index: 20;
 
     @include tablet-from {
@@ -72,7 +72,7 @@
         & a {
             color: currentColor;
             text-decoration: none;
-            transition: .5s ease-in-out;
+            transition: .3s ease-in-out;
             position: relative;
 
             &::after {
@@ -83,7 +83,7 @@
                 position: absolute;
                 bottom: -10px;
                 left: 0;
-                transition: .5s ease-in-out;
+                transition: .3s ease-in-out;
             }
 
             &:hover {
@@ -103,7 +103,7 @@
 
         &-btn {
             color: currentColor;
-            transition: .5s ease-in-out;
+            transition: .3s ease-in-out;
 
             &:hover {
                 @include tablet-from {
@@ -124,7 +124,7 @@
         gap: clamp-calc(5px, 15px);
         color: currentColor;
         text-decoration: none;
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
         font-weight: 500;
 
         @include tablet {

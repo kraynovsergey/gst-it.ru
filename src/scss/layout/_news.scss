@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    transition: .5s ease-in-out;
+    transition: .3s ease-in-out;
 
     &:hover {
         @include tablet-from {
@@ -35,11 +35,11 @@
     &__link {
         color: $color_primary;
         text-decoration: none;
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     &__date {
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
     }
 
     &__tags {

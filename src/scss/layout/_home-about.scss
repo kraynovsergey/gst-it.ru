@@ -27,7 +27,7 @@
         gap: clamp-calc(15px, 25px);
         height: 100%;
         background: $color_bg;
-        transition: transform .5s ease-in-out;
+        transition: transform .3s ease-in-out;
 
         &:hover {
             @include tablet-from {

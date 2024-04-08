@@ -17,7 +17,7 @@
         height: clamp-calc(30px, 40px);
         background: #fdebbb;
         border-radius: 50%;
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
 
         @include mobile {
             display: none;
@@ -30,7 +30,7 @@
         gap: clamp-calc(15px, 20px);
         padding: clamp-calc(25px, 50px) clamp-calc(20px, 60px);
         color: #aea5cc;
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
         position: relative;
         width: 100%;
     }
@@ -49,7 +49,7 @@
         min-width: clamp-calc(40px, 70px);
         max-width: clamp-calc(40px, 70px);
         height: auto;
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
     }
 }
 

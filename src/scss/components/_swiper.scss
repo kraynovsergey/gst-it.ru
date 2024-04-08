@@ -61,7 +61,7 @@
     }
 
     &__nav {
-        transition: .5s ease-in-out;
+        transition: .3s ease-in-out;
         min-width: clamp-calc(40px, 60px);
         max-width: clamp-calc(40px, 60px);
         height: clamp-calc(40px, 60px);
@@ -111,7 +111,7 @@
             border-radius: 50%;
             background: #7d73ab;
             opacity: 1;
-            transition: .5s ease-in-out;
+            transition: .3s ease-in-out;
             margin: 0;
 
             &-active {
