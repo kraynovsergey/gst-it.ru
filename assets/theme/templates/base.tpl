@@ -19,5 +19,8 @@
     {include 'file:chunks/cookies/cookies.tpl'}
 
     {block 'modals'}{/block}
+    
+    
+    
 </body>
 </html>

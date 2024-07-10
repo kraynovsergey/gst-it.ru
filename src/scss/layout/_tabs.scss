@@ -1,4 +1,12 @@
 .tabs {
+    display: flex;
+    align-items: center;
+    gap: clamp-calc(15px, 20px);
+    margin: 0 calc(clamp-calc(15px, 80px) * -1);
+    padding: 0 clamp-calc(15px, 80px);
+    overflow-x: auto;
+    margin-bottom: clamp-calc(20px, 40px);
+
     &__item {
         &.active {
             background: $color_primary;
@@ -7,11 +15,11 @@
     }
 
     &__slide {
-        width: auto;
+        //width: auto;
     }
 
     & .swiper-wrapper {
-        margin-bottom: clamp-calc(20px, 40px);
+        //margin-bottom: clamp-calc(20px, 40px);
     }
 }
 

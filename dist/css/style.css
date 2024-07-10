@@ -661,6 +661,13 @@ img.entered.loaded {
   padding: 0 clamp(15px, -0.7766990291px + 0.0420711974 * 100vw, 80px);
 }
 
+.swiper._full-width-small-desktop._shadow-full {
+  padding-top: 15px;
+  padding-bottom: 25px;
+  margin-top: -15px;
+  margin-bottom: -25px;
+}
+
 .swiper._full-width-tablet._shadow-full {
   padding-top: 15px;
   padding-bottom: 25px;
@@ -1969,6 +1976,11 @@ h1,
   gap: clamp(20px, 15.145631068px + 0.0129449838 * 100vw, 40px);
 }
 
+.footer._no-form {
+  border-radius: clamp(30px, 22.7184466019px + 0.0194174757 * 100vw, 60px) clamp(30px, 22.7184466019px + 0.0194174757 * 100vw, 60px) 0 0;
+  overflow: hidden;
+}
+
 .footer__content {
   display: flex;
   flex-direction: column;
@@ -2161,17 +2173,19 @@ h1,
   text-decoration: none;
 }
 
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 13.786407767px + 0.003236246 * 100vw, 20px);
+  margin: 0 calc(clamp(15px, -0.7766990291px + 0.0420711974 * 100vw, 80px) * -1);
+  padding: 0 clamp(15px, -0.7766990291px + 0.0420711974 * 100vw, 80px);
+  overflow-x: auto;
+  margin-bottom: clamp(20px, 15.145631068px + 0.0129449838 * 100vw, 40px);
+}
+
 .tabs__item.active {
   background: #291770;
   color: #fff;
-}
-
-.tabs__slide {
-  width: auto;
-}
-
-.tabs .swiper-wrapper {
-  margin-bottom: clamp(20px, 15.145631068px + 0.0129449838 * 100vw, 40px);
 }
 
 .tab-panes .tab-pane {
@@ -2982,6 +2996,22 @@ h1,
   border-radius: 50%;
 }
 
+@media (min-width: 1367px) {
+  .swiper._full-width-small-desktop._shadow-full {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
+
+@media (max-width: 1366px) {
+  .swiper._full-width-small-desktop {
+    margin: 0 calc(clamp(15px, -0.7766990291px + 0.0420711974 * 100vw, 80px) * -1);
+    padding: 0 clamp(15px, -0.7766990291px + 0.0420711974 * 100vw, 80px);
+  }
+}
+
 @media (width > 1024px) {
   .btn._blue:hover:not(:disabled) {
     background: #f0bb00;
@@ -3108,6 +3138,16 @@ h1,
   .history__title {
     position: sticky;
     top: calc(clamp(50px, 42.7184466019px + 0.0194174757 * 100vw, 80px) + 15px);
+  }
+
+  .value:hover .value__content {
+    z-index: 1;
+    opacity: 0;
+  }
+
+  .value:hover .value__text {
+    z-index: 2;
+    opacity: 1;
   }
 
   .care__items .swiper .swiper-wrapper {

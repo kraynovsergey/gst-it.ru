@@ -350,28 +350,26 @@
         <div class="container">
             <h2 class="section__title" data-aos="fade-right">Вакансии</h2>
             <div class="tabs-container">
-                <div class="swiper tabs _full-width-tablet" data-swiper-tabs>
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide tabs__slide">
-                            <button class="tabs__item tab btn btn-reset _bordered asd active" type="button"
-                                data-aos="fade-up" data-aos-delay="0">Все города</button>
-                        </div>
-                        <div class="swiper-slide tabs__slide">
-                            <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up"
-                                data-aos-delay="200">Москва</button>
-                        </div>
-                        <div class="swiper-slide tabs__slide">
-                            <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up"
-                                data-aos-delay="400">Санкт-Петебург</button>
-                        </div>
-                        <div class="swiper-slide tabs__slide">
-                            <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up"
-                                data-aos-delay="600">Самара</button>
-                        </div>
-                        <div class="swiper-slide tabs__slide">
-                            <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up"
-                                data-aos-delay="800">Саранск</button>
-                        </div>
+                <div class="tabs scrollbar-hidden">
+                    <div class="tabs__slide">
+                        <button class="tabs__item tab btn btn-reset _bordered asd active" type="button"
+                            data-aos="fade-up" data-aos-delay="0">Все города</button>
+                    </div>
+                    <div class="tabs__slide">
+                        <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up"
+                            data-aos-delay="200">Москва</button>
+                    </div>
+                    <div class="tabs__slide">
+                        <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up"
+                            data-aos-delay="400">Санкт-Петебург</button>
+                    </div>
+                    <div class="tabs__slide">
+                        <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up"
+                            data-aos-delay="600">Самара</button>
+                    </div>
+                    <div class="tabs__slide">
+                        <button class="tabs__item tab btn btn-reset _bordered" type="button" data-aos="fade-up"
+                            data-aos-delay="800">Саранск</button>
                     </div>
                 </div>
                 <div class="tab-panes" data-aos="fade-up">

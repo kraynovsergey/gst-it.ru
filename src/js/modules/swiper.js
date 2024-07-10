@@ -93,11 +93,11 @@ if (swiper_products) {
                 spaceBetween: 15,
                 slidesPerView: 2.2
             },
-            768: {
+            991: {
                 spaceBetween: 20,
                 slidesPerView: 3.2
             },
-            1024: {
+            1366: {
                 spaceBetween: 40,
                 slidesPerView: 4
             }
@@ -241,7 +241,7 @@ if (swiper_cities) {
 }
 
 /* Табы */
-const swiper_tabs = document.querySelector('[data-swiper-tabs]');
+/*const swiper_tabs = document.querySelector('[data-swiper-tabs]');
 if (swiper_tabs) {
     new Swiper(swiper_tabs, {
         breakpoints: {
@@ -255,7 +255,7 @@ if (swiper_tabs) {
             }
         }
     });
-}
+}*/
 
 /* Забота */
 const swiper_care = document.querySelector('[data-swiper-care]');

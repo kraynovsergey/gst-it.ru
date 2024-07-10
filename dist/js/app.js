@@ -9750,11 +9750,11 @@ if (swiper_products) {
                 spaceBetween: 15,
                 slidesPerView: 2.2
             },
-            768: {
+            991: {
                 spaceBetween: 20,
                 slidesPerView: 3.2
             },
-            1024: {
+            1366: {
                 spaceBetween: 40,
                 slidesPerView: 4
             }
@@ -9898,7 +9898,7 @@ if (swiper_cities) {
 }
 
 /* Табы */
-const swiper_tabs = document.querySelector('[data-swiper-tabs]');
+/*const swiper_tabs = document.querySelector('[data-swiper-tabs]');
 if (swiper_tabs) {
     new Swiper(swiper_tabs, {
         breakpoints: {
@@ -9912,7 +9912,7 @@ if (swiper_tabs) {
             }
         }
     });
-}
+}*/
 
 /* Забота */
 const swiper_care = document.querySelector('[data-swiper-care]');
@@ -10117,7 +10117,7 @@ if (tabs_container) {
 }
 ;// CONCATENATED MODULE: ./src/js/modules/value.js
 const values = document.querySelectorAll('[data-value]');
-if (values.length > 0) {
+if (values.length > 0 && window.innerWidth <= 1024) {
     values.forEach(item => {
         item.addEventListener('click', () => {
             item.classList.toggle('_active');

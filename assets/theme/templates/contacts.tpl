@@ -9,13 +9,9 @@
         {set $cities = json_decode($_modx->resource.cities, true)}
 
         <div class="tabs-container">
-            <div class="swiper tabs _full-width-tablet" data-swiper-tabs>
-                <div class="swiper-wrapper">
-                    {foreach $cities as $row}
-                        <div class="swiper-slide tabs__slide">
-                            <button class="tabs__item tab btn btn-reset _bordered asd{$row@index == 0 ? ' active' : ''}" type="button" data-aos="fade-up" data-aos-delay="{$row@index * 100}">{$row.city}</button>
-                        </div>
-                    {/foreach}
+            <div class="tabs scrollbar-hidden">
+                <div class="tabs__slide">
+                    <button class="tabs__item tab btn btn-reset _bordered asd{$row@index == 0 ? ' active' : ''}" type="button" data-aos="fade-up" data-aos-delay="{$row@index * 100}">{$row.city}</button>
                 </div>
             </div>
 

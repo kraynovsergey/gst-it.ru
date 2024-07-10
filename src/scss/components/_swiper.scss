@@ -4,6 +4,27 @@
         padding: 0 clamp-calc(15px, 80px);
     }
 
+    &._full-width-small-desktop {
+        @media (max-width: 1366px) {
+            margin: 0 calc(clamp-calc(15px, 80px) * -1);
+            padding: 0 clamp-calc(15px, 80px);
+        }
+
+        &._shadow-full {
+            padding-top: 15px;
+            padding-bottom: 25px;
+            margin-top: -15px;
+            margin-bottom: -25px;
+    
+            @media (min-width: 1367px) {
+                padding-left: 20px;
+                padding-right: 20px;
+                margin-left: -20px;
+                margin-right: -20px;
+            }
+        }
+    }
+
     &._full-width-tablet {
         @include tablet {
             margin: 0 calc(clamp-calc(15px, 80px) * -1);

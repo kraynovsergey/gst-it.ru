@@ -1,4 +1,13 @@
 .footer {
+    &._no-form {
+        border-radius: clamp-calc(30px, 60px) clamp-calc(30px, 60px) 0 0;
+        overflow: hidden;
+
+        & .footer__main {
+            //padding-top: clamp-calc(40px, 80px);
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: column;

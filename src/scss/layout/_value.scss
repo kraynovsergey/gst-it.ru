@@ -14,6 +14,20 @@
         }
     }
 
+    &:hover {
+        @include tablet-from {
+            & .value__content {
+                z-index: 1;
+                opacity: 0;
+            }
+    
+            & .value__text {
+                z-index: 2;
+                opacity: 1;
+            }
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: column;

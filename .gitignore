@@ -1,6 +1,15 @@
 /node_modules
 package-lock.json
 .htaccess
+.vscode
+robots.txt
+/dist
+/manager
+/assets
+/core
+/connectors
+config.core.php
+
 
 # General
 .DS_Store

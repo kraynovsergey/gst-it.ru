@@ -9,14 +9,12 @@
         <div class="tabs-container">
             {set $intro_tabs = json_decode($_modx->resource.intro_tabs, true)}
 
-            <div class="swiper tabs _full-width" data-swiper-tabs>
-                <div class="swiper-wrapper">
-                    {foreach $intro_tabs as $row}
-                        <div class="swiper-slide tabs__slide">
-                            <button class="tabs__item tab btn btn-reset _bordered asd{$row@index == 0 ? ' active' : ''}" type="button" data-aos="fade-up" data-aos-delay="{$row@index * 100}">{$row.title}</button>
-                        </div>
-                    {/foreach}
-                </div>
+            <div class="tabs scrollbar-hidden">
+                {foreach $intro_tabs as $row}
+                    <div class="tabs__slide">
+                        <button class="tabs__item tab btn btn-reset _bordered asd{$row@index == 0 ? ' active' : ''}" type="button" data-aos="fade-up" data-aos-delay="{$row@index * 100}">{$row.title}</button>
+                    </div>
+                {/foreach}
             </div>
 
             <div class="tab-panes">
@@ -98,7 +96,7 @@
                 {/if}
             </div>
 
-            <div class="swiper _full-width-tablet _shadow-full" data-swiper-products>
+            <div class="swiper _full-width-small-desktop _shadow-full" data-swiper-products>
                 <div class="swiper-wrapper">
                     {foreach $equipment as $row}
                         <div class="swiper-slide _equal-height" data-aos="fade-up" data-aos-delay="{$row@index * 100}">
